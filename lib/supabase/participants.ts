@@ -1,4 +1,3 @@
-import { createClient } from "./server";
 
 export type Participant = {
     id: string;

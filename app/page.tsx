@@ -1,7 +1,7 @@
-import Hero from "@/components/hero";
+// import Hero from "@/components/hero";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Phone,ArrowRight,Mail } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col items-center">

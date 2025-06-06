@@ -126,21 +126,21 @@ export default async function BookingConfirmationPage({
               <CardHeader>
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
-                    <CardTitle className="text-xl mb-2">{(booking.services as any).name}</CardTitle>
+                    <CardTitle className="text-xl mb-2">{booking.services[0].name}</CardTitle>
                     <div className="flex items-center space-x-2 mb-3">
-                      <Badge className={getCategoryColor((booking.services as any).category)}>
-                        {(booking.services as any).category.charAt(0).toUpperCase() + (booking.services as any).category.slice(1)}
+                      <Badge className={getCategoryColor(booking.services[0].category)}>
+                        {booking.services[0].category.charAt(0).toUpperCase() + booking.services[0].category.slice(1)}
                       </Badge>
                       <Badge className={`border ${getStatusColor(booking.status)}`}>
                         {booking.status.charAt(0).toUpperCase() + booking.status.slice(1)}
                       </Badge>
                     </div>
                   </div>
-                  {(booking.services as any).images && (booking.services as any).images.length > 0 && (
+                  {booking.services[0].images && booking.services[0].images.length > 0 && (
                     <div className="relative h-20 w-20 rounded-lg overflow-hidden ml-4">
                       <Image
-                        src={(booking.services as any).images[0]}
-                        alt={(booking.services as any).name}
+                        src={booking.services[0].images[0]}
+                        alt={booking.services[0].name}
                         fill
                         className="object-cover"
                       />
@@ -148,7 +148,7 @@ export default async function BookingConfirmationPage({
                   )}
                 </div>
                 <CardDescription>
-                  {(booking.services as any).description}
+                  {booking.services[0].description}
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -178,7 +178,7 @@ export default async function BookingConfirmationPage({
                     <Clock className="h-5 w-5 text-blue-600" />
                     <div>
                       <p className="text-sm text-gray-500">Duration</p>
-                      <p className="font-semibold">{(booking.services as any).duration}</p>
+                      <p className="font-semibold">{booking.services[0].duration}</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-2">
@@ -193,14 +193,14 @@ export default async function BookingConfirmationPage({
             </Card>
 
             {/* What's Included */}
-            {(booking.services as any).included_items && (booking.services as any).included_items.length > 0 && (
+            {booking.services[0].included_items && booking.services[0].included_items.length > 0 && (
               <Card>
                 <CardHeader>
                   <CardTitle>What's Included</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                    {(booking.services as any).included_items.map((item: string, index: number) => (
+                    {booking.services[0].included_items.map((item: string, index: number) => (
                       <li key={index} className="flex items-center space-x-2">
                         <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                         <span className="text-gray-700">{item}</span>
@@ -292,7 +292,7 @@ export default async function BookingConfirmationPage({
 
             {/* Actions */}
             <div>
-              <Link href={`/services/${(booking.services as any).slug}`} className="w-full">
+              <Link href={`/services/${booking.services[0].slug}`} className="w-full">
                 <Button className="w-full">
                   View Service Details
                 </Button>

@@ -1,6 +1,6 @@
 import { Button } from "./ui/button";
 import Link from "next/link";
-import { ArrowRight, MapPin, Phone, Mail } from "lucide-react";
+import { ArrowRight, Phone, Mail } from "lucide-react";
 
 export default function Hero() {
   return (

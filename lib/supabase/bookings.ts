@@ -1,4 +1,3 @@
-import { createClient } from "./server";
 
 export type Booking = {
     id: string;

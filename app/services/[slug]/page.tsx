@@ -1,7 +1,7 @@
 import { getService } from '@/lib/supabase/services';
 import { BookingForm } from '@/components/booking-form';
 import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Clock, Users, MapPin, Star } from 'lucide-react';
 import Image from 'next/image';
 

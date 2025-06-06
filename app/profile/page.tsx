@@ -3,7 +3,7 @@ import { redirect } from 'next/navigation';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Calendar, Users, MapPin, Clock, Star, TrendingUp, Award, User } from 'lucide-react';
+import { Calendar, Users, Clock, TrendingUp, Award, User } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 

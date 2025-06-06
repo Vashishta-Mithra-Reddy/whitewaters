@@ -3,7 +3,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Clock, Users, MapPin, Star } from "lucide-react";
+import { Clock, Users } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Service } from "@/lib/supabase/services";
