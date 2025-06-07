@@ -1,6 +1,6 @@
 import { SpecificServiceGrid } from "@/components/specific-service-grid";
 import { getServicesByCategory } from "@/lib/supabase/services";
-import { Waves, Moon, Users, MapPin, Mountain, Calendar, Star, Compass } from "lucide-react";
+import { Waves, Moon, Users, Mountain, Calendar, Star, Compass } from "lucide-react";
 
 export default async function RaftingPage() {
     const services = await getServicesByCategory({ category: 'rafting' });
@@ -88,7 +88,7 @@ export default async function RaftingPage() {
                         
                         <div className="bg-foreground/5 p-8 rounded-2xl shadow-sm">
                             <h3 className="text-xl font-semibold text-foreground mb-4">The Full Experience</h3>
-                            <p className="text-foreground mb-6">We help you choose the perfect descent based on your group's experience and adventure appetite. From gentle Class II waters to heart-pounding Class V rapids, every journey is tailored to your desires.</p>
+                            <p className="text-foreground mb-6">We help you choose the perfect descent based on your group&apos;s experience and adventure appetite. From gentle Class II waters to heart-pounding Class V rapids, every journey is tailored to your desires.</p>
                             
                             <div className="grid grid-cols-2 gap-4 text-sm">
                                 <div className="flex items-center gap-2">
@@ -211,7 +211,7 @@ export default async function RaftingPage() {
                                     <h4 className="font-semibold text-purple-700 mb-3">Expert Setup Required</h4>
                                     <p className="text-purple-500 mb-4">The Mandakini demands an efficient and top-notch setup to run successfully. Our gear and guides represent the best available in the region.</p>
                                     <div className="text-sm text-purple-700 bg-purple-100 p-3 rounded-lg">
-                                        <strong>Challenge Level:</strong> If you're looking for even more excitement, ask about our upper Mandakini sections!
+                                        <strong>Challenge Level:</strong> If you&apos;re looking for even more excitement, ask about our upper Mandakini sections!
                                     </div>
                                 </div>
                             </div>

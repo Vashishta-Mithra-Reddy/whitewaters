@@ -19,7 +19,7 @@ export default async function KayakingPage() {
                     </h1>
                     <p className="text-xl text-foreground mb-8 leading-relaxed">
                         Discover why we chose this perfect river junction where endless glacial waters flow from peaks to plains. 
-                        After 20+ years of first descents and Himalayan adventures, we've found the ultimate home for whitewater enthusiasts.
+                        After 20+ years of first descents and Himalayan adventures, we have found the ultimate home for whitewater enthusiasts.
                     </p>
                     <div className="flex items-center justify-center gap-8 text-sm text-gray-500">
                         <div className="flex items-center gap-2">
@@ -62,7 +62,7 @@ export default async function KayakingPage() {
                                     </div>
                                     <div>
                                         <h3 className="font-semibold text-foreground mb-2">Born from Passion</h3>
-                                        <p className="text-foreground">Kayaking at Shivanandi isn't just our business—it's our passion. We promote the sport of kayaking across India, sharing the magic that only river runners understand.</p>
+                                        <p className="text-foreground">Kayaking at Shivanandi isn&apos;t just our business—it&apos;s our passion. We promote the sport of kayaking across India, sharing the magic that only river runners understand.</p>
                                     </div>
                                 </div>
                                 
@@ -90,7 +90,7 @@ export default async function KayakingPage() {
                         
                         <div className="bg-foreground/5 p-8 rounded-2xl shadow-sm">
                             <h3 className="text-xl font-semibold text-foreground mb-4">Perfect for Learning</h3>
-                            <p className="text-foreground mb-6">Learning to kayak takes time and patience. We recommend planning at least 4-5 days for a basic course—it's always better with a friend for both fun and future paddling adventures.</p>
+                            <p className="text-foreground mb-6">Learning to kayak takes time and patience. We recommend planning at least 4-5 days for a basic course—it&apos;s always better with a friend for both fun and future paddling adventures.</p>
                             
                             <div className="space-y-3">
                                 <div className="flex items-center gap-3 text-sm">
@@ -173,7 +173,7 @@ export default async function KayakingPage() {
                             <div className="grid md:grid-cols-2 gap-8 items-center">
                                 <div>
                                     <h3 className="text-2xl font-bold text-foreground mb-4">Alaknanda River - Our Home River</h3>
-                                    <p className="text-foreground mb-6">The Alaknanda flows right past our lodge, making it our "home river." As one of the major tributaries of the Ganges in the mountains, it offers incredible variety for all skill levels.</p>
+                                    <p className="text-foreground mb-6">The Alaknanda flows right past our lodge, making it our &quot;home river.&quot; As one of the major tributaries of the Ganges in the mountains, it offers incredible variety for all skill levels.</p>
                                     
                                     <div className="space-y-3 text-sm">
                                         <div className="flex items-center gap-3">
