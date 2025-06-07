@@ -36,7 +36,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <div className="px-6 md:px-20 py-4 md:py-20 pt-16 md:pt-28">
+          <div className="px-6 md:px-20 py-80 md:py-80 pt-16 md:pt-28 pb-16 md:pb-20">
             {children}
           </div>
           <Footer />
