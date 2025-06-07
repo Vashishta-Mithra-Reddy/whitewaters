@@ -207,7 +207,7 @@ function StatsCard({
 }: { 
   title: string; 
   value: number | string; 
-  icon: string | any; 
+  icon: React.ComponentType<{ className?: string }>;
   subtitle?: string;
   className?: string;
 }) {
