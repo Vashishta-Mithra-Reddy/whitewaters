@@ -1,10 +1,291 @@
-// import { getServicesByCategory } from "@/lib/supabase/services";
+import { SpecificServiceGrid } from "@/components/specific-service-grid";
+import { getServicesByCategory } from "@/lib/supabase/services";
+import { Waves, Users, MapPin, Trophy, Mountain, Heart, Clock, Shield } from "lucide-react";
 
-export default function KayakingPage(){
-    // const services = getServicesByCategory({ category: 'kayaking' });
-    return(
-        <div>
-            <h1>Kayaking</h1>
+export default async function KayakingPage() {
+    const services = await getServicesByCategory({ category: 'kayaking' });
+    
+    return (
+        <div className="min-h-screen max-w-7xl">
+            {/* Hero Section */}
+            <section className="relative pb-20 pt-8 px-4 text-center">
+                <div className="max-w-4xl mx-auto">
+                    <div className="inline-flex items-center gap-2 bg-blue-50 px-4 py-2 rounded-full text-blue-700 text-sm font-medium mb-6">
+                        <Waves className="w-4 h-4" />
+                        Shivanandi River Lodge
+                    </div>
+                    <h1 className="text-5xl font-bold text-foreground mb-6 leading-tight">
+                        Master the Art of <span className="text-blue-600">Kayaking</span> in the Indian Himalayas
+                    </h1>
+                    <p className="text-xl text-foreground mb-8 leading-relaxed">
+                        Discover why we chose this perfect river junction where endless glacial waters flow from peaks to plains. 
+                        After 20+ years of first descents and Himalayan adventures, we've found the ultimate home for whitewater enthusiasts.
+                    </p>
+                    <div className="flex items-center justify-center gap-8 text-sm text-gray-500">
+                        <div className="flex items-center gap-2">
+                            <MapPin className="w-4 h-4" />
+                            Alaknanda River Banks
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <Mountain className="w-4 h-4" />
+                            Ganges Catchment
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <Trophy className="w-4 h-4" />
+                            Expert Instruction
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Services Grid - Your Important Booking Component */}
+            <section className="py-16 px-4">
+                <div className="max-w-7xl mx-auto">
+                    <SpecificServiceGrid services={services ?? []} />
+                </div>
+            </section>
+
+            {/* Our Story */}
+            <section className="py-20 px-4 bg-foreground/5 rounded-xl">
+                <div className="max-w-6xl mx-auto">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl font-bold text-foreground mb-4">Why We Love the River Most in a Kayak</h2>
+                        <p className="text-lg text-foreground">Come experience a few days with us and discover the pure joy of kayaking</p>
+                    </div>
+                    
+                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <div className="space-y-6">
+                                <div className="flex gap-4">
+                                    <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                                        <Heart className="w-6 h-6 text-blue-600" />
+                                    </div>
+                                    <div>
+                                        <h3 className="font-semibold text-foreground mb-2">Born from Passion</h3>
+                                        <p className="text-foreground">Kayaking at Shivanandi isn't just our business—it's our passion. We promote the sport of kayaking across India, sharing the magic that only river runners understand.</p>
+                                    </div>
+                                </div>
+                                
+                                <div className="flex gap-4">
+                                    <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                                        <Users className="w-6 h-6 text-green-600" />
+                                    </div>
+                                    <div>
+                                        <h3 className="font-semibold text-foreground mb-2">Expert Guidance</h3>
+                                        <p className="text-foreground">Learn from Shalabh, who has gained invaluable experience paddling with world-class kayakers and running first descents throughout the Indian Himalayas.</p>
+                                    </div>
+                                </div>
+                                
+                                <div className="flex gap-4">
+                                    <div className="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                                        <Shield className="w-6 h-6 text-purple-600" />
+                                    </div>
+                                    <div>
+                                        <h3 className="font-semibold text-foreground mb-2">Complete Support</h3>
+                                        <p className="text-foreground">From pool training for Eskimo rolls to advanced river support, we provide everything you need including audiovisual aids, books, and expert instruction.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div className="bg-foreground/5 p-8 rounded-2xl shadow-sm">
+                            <h3 className="text-xl font-semibold text-foreground mb-4">Perfect for Learning</h3>
+                            <p className="text-foreground mb-6">Learning to kayak takes time and patience. We recommend planning at least 4-5 days for a basic course—it's always better with a friend for both fun and future paddling adventures.</p>
+                            
+                            <div className="space-y-3">
+                                <div className="flex items-center gap-3 text-sm">
+                                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                                    <span className="text-bg-foreground">Pool training for Eskimo roll basics</span>
+                                </div>
+                                <div className="flex items-center gap-3 text-sm">
+                                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                                    <span className="text-bg-foreground">Perfect rivers for skill development</span>
+                                </div>
+                                <div className="flex items-center gap-3 text-sm">
+                                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                                    <span className="text-bg-foreground">World-class instruction and support</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Course Offerings */}
+            <section className="py-20 px-4">
+                <div className="max-w-6xl mx-auto">
+                    <h2 className="text-3xl font-bold text-center text-foreground mb-16">Our Kayaking Programs</h2>
+                    
+                    <div className="grid md:grid-cols-3 gap-8">
+                        <div className="bg-foreground/5 p-8 rounded-2xl shadow-sm border border-foreground/20 hover:shadow-md transition-shadow">
+                            <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+                                <Clock className="w-8 h-8 text-blue-600" />
+                            </div>
+                            <h3 className="text-xl font-semibold text-foreground mb-4">Beginner Courses</h3>
+                            <p className="text-foreground mb-6">Start your kayaking journey with comprehensive 4-5 day courses covering basics, pool training, and river skills with experienced instructors.</p>
+                            <div className="text-sm text-gray-500">
+                                <p>• Pool training for Eskimo roll</p>
+                                <p>• River skill development</p>
+                                <p>• Safety and technique focus</p>
+                            </div>
+                        </div>
+                        
+                        <div className="bg-foreground/5 p-8 rounded-2xl shadow-sm border border-foreground/20 hover:shadow-md transition-shadow">
+                            <div className="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mb-6">
+                                <Trophy className="w-8 h-8 text-green-600" />
+                            </div>
+                            <h3 className="text-xl font-semibold text-foreground mb-4">Advanced Workshops</h3>
+                            <p className="text-foreground mb-6">Ongoing learning for experienced paddlers with private and group workshops tailored to your skill level and river reading abilities.</p>
+                            <div className="text-sm text-gray-500">
+                                <p>• Technique refinement</p>
+                                <p>• Advanced river reading</p>
+                                <p>• Customized skill development</p>
+                            </div>
+                        </div>
+                        
+                        <div className="bg-foreground/5 p-8 rounded-2xl shadow-sm border border-foreground/20 hover:shadow-md transition-shadow">
+                            <div className="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
+                                <Users className="w-8 h-8 text-purple-600" />
+                            </div>
+                            <h3 className="text-xl font-semibold text-foreground mb-4">Youth Programs</h3>
+                            <p className="text-foreground mb-6">Week-long workshops for children that build patience, nature appreciation, endurance, and confidence while having incredible fun.</p>
+                            <div className="text-sm text-gray-500">
+                                <p>• Character building activities</p>
+                                <p>• Nature connection</p>
+                                <p>• Safe, fun environment</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Rivers Section */}
+            <section className="py-20 px-4 rounded-xl">
+                <div className="max-w-6xl mx-auto">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl font-bold text-foreground mb-4">Our Home Waters</h2>
+                        <p className="text-lg text-foreground">Explore the magnificent rivers that flow through and around Shivanandi</p>
+                    </div>
+                    
+                    <div className="space-y-12">
+                        {/* Alaknanda River */}
+                        <div className="bg-foreground/5 rounded-2xl p-8 shadow-sm">
+                            <div className="grid md:grid-cols-2 gap-8 items-center">
+                                <div>
+                                    <h3 className="text-2xl font-bold text-foreground mb-4">Alaknanda River - Our Home River</h3>
+                                    <p className="text-foreground mb-6">The Alaknanda flows right past our lodge, making it our "home river." As one of the major tributaries of the Ganges in the mountains, it offers incredible variety for all skill levels.</p>
+                                    
+                                    <div className="space-y-3 text-sm">
+                                        <div className="flex items-center gap-3">
+                                            <span className="w-3 h-3 bg-red-500 rounded-full"></span>
+                                            <span><strong>Class 4-5:</strong> Birahi to Nandprayag (20 km)</span>
+                                        </div>
+                                        <div className="flex items-center gap-3">
+                                            <span className="w-3 h-3 bg-orange-500 rounded-full"></span>
+                                            <span><strong>Class 3-4:</strong> Nandprayag to Rudraprayag (40 km)</span>
+                                        </div>
+                                        <div className="flex items-center gap-3">
+                                            <span className="w-3 h-3 bg-green-500 rounded-full"></span>
+                                            <span><strong>Class 2-3:</strong> Rudraprayag to Dharidevi (20 km)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="bg-foreground/5 p-6 rounded-xl">
+                                    <h4 className="font-semibold text-foreground mb-3">Highlighted Section</h4>
+                                    <p className="text-foreground mb-4"><strong>Shivanandi to Rudraprayag:</strong> A thrilling 13km run with numerous Class 3-4 rapids, including the spectacular Goats-Leap Gorge (Kakkar Fall) entry above Rudraprayag.</p>
+                                    <div className="text-sm text-gray-500">Perfect for intermediate to advanced kayakers seeking technical challenges</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        {/* Mandakini River */}
+                        <div className="bg-foreground/5 rounded-2xl p-8 shadow-sm">
+                            <div className="grid md:grid-cols-2 gap-8 items-center">
+                                <div className="bg-foreground/5 p-6 rounded-xl">
+                                    <h4 className="font-semibold text-foreground mb-3">The Hidden Gem</h4>
+                                    <p className="text-foreground mb-4">The secret is out! The Mandakini provides some of the finest Class V Alpine Himalayan kayaking experiences, just 10 kilometers from our lodge.</p>
+                                    <div className="text-sm text-gray-500">Joins the Alaknanda at the sacred town of Rudraprayag</div>
+                                </div>
+                                <div>
+                                    <h3 className="text-2xl font-bold text-foreground mb-4">Mandakini River</h3>
+                                    <p className="text-foreground mb-6">Experience world-class alpine kayaking on sections that offer everything from technical Class IV+ steep runs to fun Class III-IV sections perfect for rafting.</p>
+                                    
+                                    <div className="space-y-3 text-sm">
+                                        <div className="flex items-center gap-3">
+                                            <span className="w-3 h-3 bg-red-500 rounded-full"></span>
+                                            <span><strong>Class IV+:</strong> Rampur to Kalimath bridge</span>
+                                        </div>
+                                        <div className="flex items-center gap-3">
+                                            <span className="w-3 h-3 bg-orange-500 rounded-full"></span>
+                                            <span><strong>Class IV:</strong> Kalimath bridge to Syalsaur</span>
+                                        </div>
+                                        <div className="flex items-center gap-3">
+                                            <span className="w-3 h-3 bg-yellow-500 rounded-full"></span>
+                                            <span><strong>Class III-IV:</strong> Thavali to Rudraprayag</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        {/* Pindar River */}
+                        <div className="bg-foreground/5 rounded-2xl p-8 shadow-sm">
+                            <div className="text-center">
+                                <h3 className="text-2xl font-bold text-foreground mb-4">Pindar River</h3>
+                                <p className="text-foreground mb-6 max-w-3xl mx-auto">
+                                    Journey from the remote Pindari Glacier through steep canyon whitewater, emerging as a mature river with sandy beaches and relaxed Class III rapids for 60 kilometers until meeting the Alaknanda at Karnprayag.
+                                </p>
+                                <div className="inline-flex items-center gap-2 bg-green-50 px-4 py-2 rounded-full text-green-700 text-sm">
+                                    <Mountain className="w-4 h-4" />
+                                    Longest River Adventure Available
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Support Services */}
+            <section className="py-20 px-4">
+                <div className="max-w-4xl mx-auto text-center">
+                    <h2 className="text-3xl font-bold text-foreground mb-8">Complete River Support</h2>
+                    <p className="text-lg text-foreground mb-12">Independent kayaking teams receive full support for multi-day adventures across our network of rivers</p>
+                    
+                    <div className="grid md:grid-cols-4 gap-6">
+                        <div className="p-6">
+                            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                                <Waves className="w-6 h-6 text-blue-600" />
+                            </div>
+                            <h3 className="font-semibold text-foreground mb-2">Kayak Rental</h3>
+                            <p className="text-sm text-foreground">Top-quality kayaks and gear</p>
+                        </div>
+                        
+                        <div className="p-6">
+                            <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                                <Users className="w-6 h-6 text-green-600" />
+                            </div>
+                            <h3 className="font-semibold text-foreground mb-2">Raft Support</h3>
+                            <p className="text-sm text-foreground">Safety and gear transport</p>
+                        </div>
+                        
+                        <div className="p-6">
+                            <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                                <MapPin className="w-6 h-6 text-purple-600" />
+                            </div>
+                            <h3 className="font-semibold text-foreground mb-2">Transport</h3>
+                            <p className="text-sm text-foreground">Drop-off and pick-up service</p>
+                        </div>
+                        
+                        <div className="p-6">
+                            <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                                <Shield className="w-6 h-6 text-orange-600" />
+                            </div>
+                            <h3 className="font-semibold text-foreground mb-2">Road Support</h3>
+                            <p className="text-sm text-foreground">Complete logistics assistance</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 }

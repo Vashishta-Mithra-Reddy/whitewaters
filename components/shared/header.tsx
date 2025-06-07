@@ -9,15 +9,15 @@ return (
               <Link href={"/"} className="text-lg">White Waters</Link>
             </div>
             <div className="hidden md:flex gap-10">
-              <Link href={"/services"} className="text-foreground px-5 py-2 rounded-lg hover:text-foreground hover:bg-background/50">
+              {/* <Link href={"/services"} className="text-foreground px-5 py-2 rounded-lg hover:text-foreground hover:bg-background/50">
                 Services
-              </Link>
-              {/* <Link href={"/kayaking"} className="text-foreground/60 px-5 py-2 rounded-lg hover:text-foreground hover:bg-background/80">
+              </Link> */}
+              <Link href={"/kayaking"} className="text-foreground px-5 py-2 rounded-lg hover:text-foreground hover:bg-background/80 active:bg-background/80">
                 Kayaking
               </Link>
-              <Link href={"/rafting"} className="text-foreground/60 px-5 py-2 rounded-lg hover:text-foreground hover:bg-background/80">
+              <Link href={"/rafting"} className="text-foreground px-5 py-2 rounded-lg hover:text-foreground hover:bg-background/80">
                 Rafting
-              </Link>  */}
+              </Link> 
               {/* <Link href={"/about"} className="text-muted-foreground">
                 About
               </Link>

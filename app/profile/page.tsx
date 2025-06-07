@@ -20,7 +20,7 @@ type BookingWithService = {
     slug: string;
     category: string;
     duration: string;
-    images: string[] | null;
+    images: string[];
 }[];
 };
 
