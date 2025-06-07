@@ -1,35 +1,35 @@
 import { createClient } from '@/lib/supabase/server';
-import { redirect } from 'next/navigation';
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { CheckCircle, Calendar, Users, Clock, MapPin, Mail, Phone, User, IndianRupee } from 'lucide-react';
+import { CheckCircle, Calendar, Users, Clock, Mail, Phone, User, IndianRupee } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-type BookingWithService = {
-  id: string;
-  service_id: string;
-  user_id: string | null;
-  guest_name: string | null;
-  guest_email: string | null;
-  guest_phone: string | null;
-  booking_date: string;
-  participants: number;
-  total_amount: number;
-  status: 'pending' | 'confirmed' | 'cancelled';
-  special_requests: string | null;
-  created_at: string;
-  services: {
-    name: string;
-    slug: string;
-    category: string;
-    duration: string;
-    description: string;
-    images: string[] | null;
-    included_items: string[] | null;
-  };
-};
+// type BookingWithService = {
+//   id: string;
+//   service_id: string;
+//   user_id: string | null;
+//   guest_name: string | null;
+//   guest_email: string | null;
+//   guest_phone: string | null;
+//   booking_date: string;
+//   participants: number;
+//   total_amount: number;
+//   status: 'pending' | 'confirmed' | 'cancelled';
+//   special_requests: string | null;
+//   created_at: string;
+//   services: {
+//     name: string;
+//     slug: string;
+//     category: string;
+//     duration: string;
+//     description: string;
+//     images: string[] | null;
+//     included_items: string[] | null;
+//   };
+// };
 
 export default async function BookingConfirmationPage({
   params,
@@ -54,16 +54,7 @@ export default async function BookingConfirmationPage({
       total_amount,
       status,
       special_requests,
-      created_at,
-      services!inner (
-        name,
-        slug,
-        category,
-        duration,
-        description,
-        images,
-        included_items
-      )
+      created_at
     `)
     .eq('id', id)
     .single();
@@ -73,7 +64,7 @@ export default async function BookingConfirmationPage({
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-gray-900 mb-4">Booking not found</h1>
-          <p className="text-gray-600 mb-6">The booking you're looking for doesn't exist or has been removed.</p>
+          <p className="text-gray-600 mb-6">The booking you are looking for doesnot exist or has been removed.</p>
           <Link href="/services">
             <Button>Browse Services</Button>
           </Link>
@@ -81,6 +72,27 @@ export default async function BookingConfirmationPage({
       </div>
     );
   }
+
+  // Now fetch the service:
+  const { data: service, error: serviceError } = await supabase
+  .from('services')
+  .select(`
+    name,
+    slug,
+    category,
+    duration,
+    description,
+    images,
+    included_items
+    `)
+  .eq('id', booking.service_id)
+  .single();
+
+  if (serviceError || !service) {
+  // handle error
+  return <div>Service not found</div>;
+  }
+
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -126,21 +138,21 @@ export default async function BookingConfirmationPage({
               <CardHeader>
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
-                    <CardTitle className="text-xl mb-2">{booking.services[0].name}</CardTitle>
+                    <CardTitle className="text-xl mb-2">{service.name}</CardTitle>
                     <div className="flex items-center space-x-2 mb-3">
-                      <Badge className={getCategoryColor(booking.services[0].category)}>
-                        {booking.services[0].category.charAt(0).toUpperCase() + booking.services[0].category.slice(1)}
+                      <Badge className={getCategoryColor(service.category)}>
+                        {service.category.charAt(0).toUpperCase() + service.category.slice(1)}
                       </Badge>
                       <Badge className={`border ${getStatusColor(booking.status)}`}>
                         {booking.status.charAt(0).toUpperCase() + booking.status.slice(1)}
                       </Badge>
                     </div>
                   </div>
-                  {booking.services[0].images && booking.services[0].images.length > 0 && (
+                  {service.images && service.images.length > 0 && (
                     <div className="relative h-20 w-20 rounded-lg overflow-hidden ml-4">
                       <Image
-                        src={booking.services[0].images[0]}
-                        alt={booking.services[0].name}
+                        src={service.images[0]}
+                        alt={service.name}
                         fill
                         className="object-cover"
                       />
@@ -148,7 +160,7 @@ export default async function BookingConfirmationPage({
                   )}
                 </div>
                 <CardDescription>
-                  {booking.services[0].description}
+                  {service.description}
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -178,7 +190,7 @@ export default async function BookingConfirmationPage({
                     <Clock className="h-5 w-5 text-blue-600" />
                     <div>
                       <p className="text-sm text-gray-500">Duration</p>
-                      <p className="font-semibold">{booking.services[0].duration}</p>
+                      <p className="font-semibold">{service.duration}</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-2">
@@ -193,14 +205,14 @@ export default async function BookingConfirmationPage({
             </Card>
 
             {/* What's Included */}
-            {booking.services[0].included_items && booking.services[0].included_items.length > 0 && (
+            {service.included_items && service.included_items.length > 0 && (
               <Card>
                 <CardHeader>
-                  <CardTitle>What's Included</CardTitle>
+                  <CardTitle>Things Included</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                    {booking.services[0].included_items.map((item: string, index: number) => (
+                    {service.included_items.map((item: string, index: number) => (
                       <li key={index} className="flex items-center space-x-2">
                         <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                         <span className="text-gray-700">{item}</span>
@@ -292,7 +304,7 @@ export default async function BookingConfirmationPage({
 
             {/* Actions */}
             <div>
-              <Link href={`/services/${booking.services[0].slug}`} className="w-full">
+              <Link href={`/services/${service.slug}`} className="w-full">
                 <Button className="w-full">
                   View Service Details
                 </Button>
@@ -316,7 +328,7 @@ export default async function BookingConfirmationPage({
         {/* Next Steps */}
         <Card className="mt-8">
           <CardHeader>
-            <CardTitle>What's Next?</CardTitle>
+            <CardTitle>Next Step?</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -326,7 +338,7 @@ export default async function BookingConfirmationPage({
                 </div>
                 <h3 className="font-semibold mb-2">Confirmation Email</h3>
                 <p className="text-sm text-gray-600">
-                  You'll receive a confirmation email with all the details shortly.
+                  You will receive a confirmation email with all the details shortly.
                 </p>
               </div>
               <div className="text-center">
@@ -344,7 +356,7 @@ export default async function BookingConfirmationPage({
                 </div>
                 <h3 className="font-semibold mb-2">Prepare for Adventure</h3>
                 <p className="text-sm text-gray-600">
-                  Check the included items and requirements to ensure you're ready.
+                  Check the included items and requirements to ensure you are ready.
                 </p>
               </div>
             </div>

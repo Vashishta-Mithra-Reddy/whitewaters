@@ -81,7 +81,7 @@ export default async function ProfilePage() {
   // Calculate stats
   const totalBookings = bookings?.length || 0;
   const confirmedBookings = bookings?.filter(b => b.status === 'confirmed').length || 0;
-  const totalSpent = bookings?.reduce((sum, booking) => sum + booking.total_amount, 0) || 0;
+  // const totalSpent = bookings?.reduce((sum, booking) => sum + booking.total_amount, 0) || 0;
   const upcomingBookings = bookings?.filter(b => 
     new Date(b.booking_date) > new Date() && b.status !== 'cancelled'
   ).length || 0;
@@ -255,7 +255,7 @@ export default async function ProfilePage() {
                   <div className="space-y-4">
                     {bookings.map((booking: BookingWithService) => {
                       const isUpcoming = new Date(booking.booking_date) > new Date();
-                      const isPast = new Date(booking.booking_date) < new Date();
+                      // const isPast = new Date(booking.booking_date) < new Date();
                       
                       return (
                         <div key={booking.id} className="group border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-gray-300 transition-all duration-200">

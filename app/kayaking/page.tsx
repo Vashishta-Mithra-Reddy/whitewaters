@@ -1,4 +1,4 @@
-import { getServicesByCategory } from "@/lib/supabase/services";
+// import { getServicesByCategory } from "@/lib/supabase/services";
 
 export default function KayakingPage(){
     // const services = getServicesByCategory({ category: 'kayaking' });

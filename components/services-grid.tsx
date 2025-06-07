@@ -10,37 +10,36 @@ export function ServicesGrid() {
   const [services, setServices] = useState<Service[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  
-  // const categories = ['all', 'kayaking', 'rafting', 'expedition'];
+
   const categories = ['all', 'kayaking', 'rafting'];
 
-  
   useEffect(() => {
+    const fetchServices = async () => {
+      const supabase = createClient();
+      let query = supabase
+        .from('services')
+        .select('*')
+        .eq('is_active', true)
+        .order('created_at', { ascending: false });
+
+      if (selectedCategory !== 'all') {
+        query = query.eq('category', selectedCategory);
+      }
+
+      const { data, error } = await query;
+
+      if (error) {
+        console.error('Error fetching services:', error);
+      } else {
+        setServices(data || []);
+      }
+      setLoading(false);
+    };
+
+    setLoading(true); // Add this so that loading spinner shows when switching categories
     fetchServices();
   }, [selectedCategory]);
-  
-  const fetchServices = async () => {
-    const supabase = createClient();
-    let query = supabase
-      .from('services')
-      .select('*')
-      .eq('is_active', true)
-      .order('created_at', { ascending: false });
-    
-    if (selectedCategory !== 'all') {
-      query = query.eq('category', selectedCategory);
-    }
-    
-    const { data, error } = await query;
-    
-    if (error) {
-      console.error('Error fetching services:', error);
-    } else {
-      setServices(data || []);
-    }
-    setLoading(false);
-  };
-  
+
   if (loading) {
     return (
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -50,7 +49,7 @@ export function ServicesGrid() {
       </div>
     );
   }
-  
+
   return (
     <div className="space-y-6 md:px-6 px-2">
       {/* Category Filter */}
@@ -66,14 +65,14 @@ export function ServicesGrid() {
           </Button>
         ))}
       </div>
-      
+
       {/* Services Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map((service) => (
           <ServiceCard key={service.id} service={service} />
         ))}
       </div>
-      
+
       {services.length === 0 && (
         <div className="text-center py-12">
           <p className="text-muted-foreground">No services found in this category.</p>

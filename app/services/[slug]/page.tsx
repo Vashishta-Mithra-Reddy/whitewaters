@@ -18,7 +18,7 @@ export default async function ServiceDetailPage({
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-gray-900 mb-4">Service not found</h1>
-          <p className="text-gray-600">The service you're looking for doesn't exist or has been removed.</p>
+          <p className="text-gray-600">The service you are looking for does not exist or has been removed.</p>
         </div>
       </div>
     );
@@ -137,7 +137,7 @@ export default async function ServiceDetailPage({
             {service.included_items && service.included_items.length > 0 && (
               <Card>
                 <CardHeader>
-                  <CardTitle className='text-2xl'>What's Included</CardTitle>
+                  <CardTitle className='text-2xl'>Things Included</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
