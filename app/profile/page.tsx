@@ -1,10 +1,10 @@
 import { createClient } from '@/lib/supabase/server';
 import { redirect } from 'next/navigation';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+// import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Calendar, Users, Clock, TrendingUp, Award, User, AlertCircle, RefreshCw, MapPin, Star } from 'lucide-react';
+import { Calendar, Users, Clock, TrendingUp, Award, User, AlertCircle, RefreshCw, Star } from 'lucide-react';
 import Link from 'next/link';
 import ServiceImage from '@/components/ServiceImage';
 import { Suspense } from 'react';
@@ -207,7 +207,7 @@ function StatsCard({
 }: { 
   title: string; 
   value: number | string; 
-  icon: any; 
+  icon: string | any; 
   subtitle?: string;
   className?: string;
 }) {
