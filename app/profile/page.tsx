@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Calendar, Users, Clock, TrendingUp, Award, User, AlertCircle, RefreshCw } from 'lucide-react';
+import { Calendar, Users, Clock, TrendingUp, Award, User, AlertCircle, RefreshCw, MapPin, Star } from 'lucide-react';
 import Link from 'next/link';
 import ServiceImage from '@/components/ServiceImage';
 import { Suspense } from 'react';
@@ -39,122 +39,74 @@ type ProfileStats = {
 };
 
 // Loading skeleton components
-function StatsCardSkeleton() {
-  return (
-    <Card className="animate-pulse">
-      <CardContent className="p-6">
-        <div className="flex items-center justify-between">
-          <div className="space-y-2">
-            <div className="h-4 w-24 bg-gray-200 rounded"></div>
-            <div className="h-8 w-16 bg-gray-200 rounded"></div>
-          </div>
-          <div className="h-8 w-8 bg-gray-200 rounded"></div>
-        </div>
-      </CardContent>
-    </Card>
-  );
-}
-
-function BookingCardSkeleton() {
-  return (
-    <div className="border border-gray-200 rounded-xl p-6 animate-pulse">
-      <div className="flex items-start space-x-4">
-        <div className="h-16 w-16 bg-gray-200 rounded-lg flex-shrink-0"></div>
-        <div className="flex-1 space-y-3">
-          <div className="flex items-start justify-between">
-            <div className="space-y-2 flex-1">
-              <div className="h-6 w-48 bg-gray-200 rounded"></div>
-              <div className="flex space-x-2">
-                <div className="h-5 w-16 bg-gray-200 rounded-full"></div>
-                <div className="h-5 w-20 bg-gray-200 rounded-full"></div>
-              </div>
-            </div>
-            <div className="space-y-1 text-right">
-              <div className="h-6 w-16 bg-gray-200 rounded"></div>
-              <div className="h-4 w-20 bg-gray-200 rounded"></div>
-            </div>
-          </div>
-          <div className="grid grid-cols-4 gap-4">
-            {[...Array(4)].map((_, i) => (
-              <div key={i} className="h-4 bg-gray-200 rounded"></div>
-            ))}
-          </div>
-          <div className="border-t pt-4">
-            <div className="flex space-x-3">
-              <div className="h-8 w-24 bg-gray-200 rounded"></div>
-              <div className="h-8 w-24 bg-gray-200 rounded"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 function ProfileLoadingSkeleton() {
   return (
     <div className="min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
         {/* Header Skeleton */}
-        <div className="mb-8">
-          <div className="flex items-center space-x-4 mb-4">
-            <div className="bg-gray-200 rounded-full p-3 animate-pulse">
-              <div className="h-8 w-8"></div>
-            </div>
-            <div className="space-y-2">
-              <div className="h-8 w-48 bg-gray-200 rounded animate-pulse"></div>
-              <div className="h-4 w-64 bg-gray-200 rounded animate-pulse"></div>
+        <div className="bg-white rounded-2xl p-8 shadow-sm animate-pulse">
+          <div className="flex items-center space-x-6">
+            <div className="w-20 h-20 bg-gray-200 rounded-full"></div>
+            <div className="space-y-3">
+              <div className="h-8 w-64 bg-gray-200 rounded"></div>
+              <div className="h-5 w-48 bg-gray-200 rounded"></div>
+              <div className="h-4 w-32 bg-gray-200 rounded"></div>
             </div>
           </div>
         </div>
 
         {/* Stats Cards Skeleton */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-          <StatsCardSkeleton />
-          <StatsCardSkeleton />
-          <StatsCardSkeleton />
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          {[...Array(4)].map((_, i) => (
+            <div key={i} className="bg-white rounded-xl p-6 shadow-sm animate-pulse">
+              <div className="flex items-center justify-between">
+                <div className="space-y-2">
+                  <div className="h-4 w-20 bg-gray-200 rounded"></div>
+                  <div className="h-8 w-12 bg-gray-200 rounded"></div>
+                </div>
+                <div className="h-8 w-8 bg-gray-200 rounded"></div>
+              </div>
+            </div>
+          ))}
         </div>
 
-        {/* Main Content Skeleton */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-          {/* Sidebar Skeleton */}
-          <div className="lg:col-span-1">
-            <Card className="animate-pulse">
-              <CardHeader>
-                <div className="h-6 w-32 bg-gray-200 rounded"></div>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="p-4 bg-gray-50 rounded-lg space-y-2">
-                  <div className="h-4 w-24 bg-gray-200 rounded"></div>
-                  <div className="h-5 w-32 bg-gray-200 rounded"></div>
-                </div>
-                <div className="p-4 bg-gray-50 rounded-lg space-y-2">
-                  <div className="h-4 w-28 bg-gray-200 rounded"></div>
-                  <div className="h-6 w-20 bg-gray-200 rounded-full"></div>
-                </div>
-                <div className="h-10 w-full bg-gray-200 rounded"></div>
-              </CardContent>
-            </Card>
+        {/* Bookings Skeleton */}
+        <div className="bg-white rounded-2xl p-8 shadow-sm space-y-6">
+          <div className="flex items-center justify-between">
+            <div className="space-y-2">
+              <div className="h-7 w-48 bg-gray-200 rounded animate-pulse"></div>
+              <div className="h-4 w-64 bg-gray-200 rounded animate-pulse"></div>
+            </div>
+            <div className="h-6 w-16 bg-gray-200 rounded-full animate-pulse"></div>
           </div>
-
-          {/* Bookings Skeleton */}
-          <div className="lg:col-span-3">
-            <Card>
-              <CardHeader>
-                <div className="flex items-center justify-between">
-                  <div className="space-y-2">
-                    <div className="h-6 w-32 bg-gray-200 rounded animate-pulse"></div>
-                    <div className="h-4 w-48 bg-gray-200 rounded animate-pulse"></div>
+          <div className="space-y-4">
+            {[...Array(3)].map((_, i) => (
+              <div key={i} className="border border-gray-100 rounded-xl p-6 animate-pulse">
+                <div className="flex items-start space-x-4">
+                  <div className="h-16 w-16 bg-gray-200 rounded-lg flex-shrink-0"></div>
+                  <div className="flex-1 space-y-3">
+                    <div className="flex items-start justify-between">
+                      <div className="space-y-2 flex-1">
+                        <div className="h-6 w-48 bg-gray-200 rounded"></div>
+                        <div className="flex space-x-2">
+                          <div className="h-5 w-16 bg-gray-200 rounded-full"></div>
+                          <div className="h-5 w-20 bg-gray-200 rounded-full"></div>
+                        </div>
+                      </div>
+                      <div className="space-y-1 text-right">
+                        <div className="h-6 w-16 bg-gray-200 rounded"></div>
+                        <div className="h-4 w-20 bg-gray-200 rounded"></div>
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-4 gap-4">
+                      {[...Array(4)].map((_, j) => (
+                        <div key={j} className="h-4 bg-gray-200 rounded"></div>
+                      ))}
+                    </div>
                   </div>
-                  <div className="h-6 w-16 bg-gray-200 rounded-full animate-pulse"></div>
                 </div>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <BookingCardSkeleton />
-                <BookingCardSkeleton />
-                <BookingCardSkeleton />
-              </CardContent>
-            </Card>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -165,22 +117,24 @@ function ProfileLoadingSkeleton() {
 // Error component
 function ProfileError({ error, retry }: { error: string; retry?: () => void }) {
   return (
-    <div className="min-h-screen flex items-center justify-center">
+    <div className="min-h-screen bg-gray-50/50 flex items-center justify-center">
       <div className="max-w-md w-full px-4">
-        <Alert className="border-red-200 bg-red-50">
-          <AlertCircle className="h-4 w-4 text-red-600" />
-          <AlertDescription className="text-red-800">
-            {error}
-          </AlertDescription>
-        </Alert>
-        {retry && (
-          <div className="mt-4 text-center">
-            <Button onClick={retry} variant="outline" className="gap-2">
-              <RefreshCw className="h-4 w-4" />
-              Try Again
-            </Button>
-          </div>
-        )}
+        <div className="bg-white rounded-2xl p-8 shadow-sm">
+          <Alert className="border-red-200 bg-red-50">
+            <AlertCircle className="h-4 w-4 text-red-600" />
+            <AlertDescription className="text-red-800">
+              {error}
+            </AlertDescription>
+          </Alert>
+          {retry && (
+            <div className="mt-6 text-center">
+              <Button onClick={retry} variant="outline" className="gap-2">
+                <RefreshCw className="h-4 w-4" />
+                Try Again
+              </Button>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
@@ -196,8 +150,8 @@ function calculateStats(bookings: Booking[]): ProfileStats {
 
   const adventureLevel = 
     totalBookings === 0 ? 'Beginner' :
-    totalBookings < 5 ? 'Explorer' :
-    totalBookings < 10 ? 'Adventurer' : 'Expert';
+    totalBookings < 2 ? 'Explorer' :
+    totalBookings < 5 ? 'Adventurer' : 'Expert';
 
   return {
     totalBookings,
@@ -209,20 +163,20 @@ function calculateStats(bookings: Booking[]): ProfileStats {
 
 function getStatusColor(status: BookingStatus): string {
   const colors = {
-    confirmed: 'bg-green-100 text-green-800 border-green-200',
-    pending: 'bg-yellow-100 text-yellow-800 border-yellow-200',
-    cancelled: 'bg-red-100 text-red-800 border-red-200'
+    confirmed: 'bg-emerald-50 text-emerald-700 border-emerald-200',
+    pending: 'bg-amber-50 text-amber-700 border-amber-200',
+    cancelled: 'bg-red-50 text-red-700 border-red-200'
   };
-  return colors[status] || 'bg-gray-100 text-gray-800 border-gray-200';
+  return colors[status] || 'bg-gray-50 text-gray-700 border-gray-200';
 }
 
 function getCategoryColor(category: string): string {
   const colors: Record<string, string> = {
-    kayaking: 'bg-blue-100 text-blue-800',
-    rafting: 'bg-orange-100 text-orange-800',
-    expedition: 'bg-purple-100 text-purple-800'
+    kayaking: 'bg-blue-50 text-blue-700 border-blue-200',
+    rafting: 'bg-orange-50 text-orange-700 border-orange-200',
+    expedition: 'bg-purple-50 text-purple-700 border-purple-200'
   };
-  return colors[category] || 'bg-gray-100 text-gray-800';
+  return colors[category] || 'bg-gray-50 text-gray-700 border-gray-200';
 }
 
 function formatDate(dateString: string, options?: Intl.DateTimeFormatOptions): string {
@@ -233,32 +187,43 @@ function formatDate(dateString: string, options?: Intl.DateTimeFormatOptions): s
   }
 }
 
+function getAdventureLevelColor(level: string): string {
+  const colors: Record<string, string> = {
+    'Beginner': 'bg-green-50 text-green-700 border-green-200',
+    'Explorer': 'bg-blue-50 text-blue-700 border-blue-200',
+    'Adventurer': 'bg-purple-50 text-purple-700 border-purple-200',
+    'Expert': 'bg-orange-50 text-orange-700 border-orange-200'
+  };
+  return colors[level] || 'bg-gray-50 text-gray-700 border-gray-200';
+}
+
 // Stats card component
 function StatsCard({ 
   title, 
   value, 
   icon: Icon, 
-  gradient 
+  subtitle,
+  className = ""
 }: { 
   title: string; 
-  value: number; 
+  value: number | string; 
   icon: any; 
-  gradient: string; 
+  subtitle?: string;
+  className?: string;
 }) {
   return (
-    <Card className={`${gradient} text-white`}>
-      <CardContent className="p-6">
-        <div className="flex items-center justify-between">
-          <div>
-            <p className="text-white/80 text-sm font-medium">{title}</p>
-            <p className="text-3xl font-bold" aria-label={`${title}: ${value}`}>
-              {value}
-            </p>
-          </div>
-          <Icon className="h-8 w-8 text-white/60" aria-hidden="true" />
+    <div className={`bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow ${className}`}>
+      <div className="flex items-center justify-between">
+        <div className="space-y-1">
+          <p className="text-sm font-medium text-gray-600">{title}</p>
+          <p className="text-2xl font-bold text-gray-900">{value}</p>
+          {subtitle && <p className="text-xs text-gray-500">{subtitle}</p>}
         </div>
-      </CardContent>
-    </Card>
+        <div className="p-3 bg-gray-50 rounded-lg">
+          <Icon className="h-6 w-6 text-gray-600" />
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -279,82 +244,79 @@ function BookingCard({
   const createdDate = formatDate(booking.created_at);
 
   return (
-    <div className="group border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-gray-300 transition-all duration-200">
+    <div className="border border-gray-100 rounded-xl p-6 hover:shadow-md hover:border-gray-200 transition-all duration-200 bg-white">
       <div className="flex items-start space-x-4">
         <ServiceImage 
           service={service} 
-          className="h-16 w-16 flex-shrink-0" 
+          className="h-16 w-16 flex-shrink-0 rounded-lg object-cover" 
         />
 
         <div className="flex-1 min-w-0">
-          <div className="flex items-start justify-between mb-3">
+          <div className="flex items-start justify-between mb-4">
             <div className="flex-1 min-w-0">
-              <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors truncate">
+              <h3 className="text-lg font-semibold text-gray-900 hover:text-blue-600 transition-colors truncate mb-2">
                 <Link 
                   href={`/services/${service.slug}`}
                   className="hover:underline focus:underline focus:outline-none"
-                  aria-label={`View ${service.name} service details`}
                 >
                   {service.name}
                 </Link>
               </h3>
-              <div className="flex items-center space-x-2 mt-1 flex-wrap gap-1">
-                <Badge className={getCategoryColor(service.category)}>
+              <div className="flex items-center space-x-2 flex-wrap gap-2">
+                <Badge className={`border ${getCategoryColor(service.category)}`}>
                   {service.category.charAt(0).toUpperCase() + service.category.slice(1)}
                 </Badge>
                 <Badge className={`border ${getStatusColor(booking.status)}`}>
                   {booking.status.charAt(0).toUpperCase() + booking.status.slice(1)}
                 </Badge>
                 {isUpcoming && booking.status !== 'cancelled' && (
-                  <Badge className="bg-blue-100 text-blue-800">Upcoming</Badge>
+                  <Badge className="bg-blue-50 text-blue-700 border-blue-200">
+                    Upcoming
+                  </Badge>
                 )}
               </div>
             </div>
             <div className="text-right ml-4">
-              <p className="text-lg font-bold text-gray-900" aria-label={`Total amount: ${booking.total_amount} rupees`}>
+              <p className="text-xl font-bold text-gray-900">
                 ₹{booking.total_amount.toLocaleString()}
               </p>
-              <p className="text-sm text-gray-500" aria-label={`Booked on ${createdDate}`}>
-                {createdDate}
+              <p className="text-sm text-gray-500">
+                Booked {createdDate}
               </p>
             </div>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
             <div className="flex items-center space-x-2 text-gray-600">
-              <Calendar className="h-4 w-4 flex-shrink-0" aria-hidden="true" />
-              <span className="truncate" title={bookingDate}>
-                {bookingDate}
-              </span>
+              <Calendar className="h-4 w-4 flex-shrink-0 text-gray-400" />
+              <span className="text-sm font-medium">{bookingDate}</span>
             </div>
             <div className="flex items-center space-x-2 text-gray-600">
-              <Users className="h-4 w-4 flex-shrink-0" aria-hidden="true" />
-              <span>
+              <Users className="h-4 w-4 flex-shrink-0 text-gray-400" />
+              <span className="text-sm font-medium">
                 {booking.participants} participant{booking.participants > 1 ? 's' : ''}
               </span>
             </div>
             <div className="flex items-center space-x-2 text-gray-600">
-              <Clock className="h-4 w-4 flex-shrink-0" aria-hidden="true" />
-              <span className="truncate" title={service.duration}>
-                {service.duration}
-              </span>
+              <Clock className="h-4 w-4 flex-shrink-0 text-gray-400" />
+              <span className="text-sm font-medium">{service.duration}</span>
             </div>
             <div className="flex items-center space-x-2 text-gray-600">
-              <span className="truncate" title={`Booking ID: ${booking.id}`}>
-                ID: {booking.id.slice(0, 8)}...
+              <span className="text-sm font-medium text-gray-500">
+                #{booking.id.slice(0, 8)}
               </span>
             </div>
           </div>
 
-          <div className="flex items-center justify-between mt-4 pt-4 border-t border-gray-100">
+          <div className="flex items-center justify-between pt-4 border-t border-gray-100">
             <div className="flex space-x-3">
               <Link href={`/booking-confirmation/${booking.id}`}>
-                <Button variant="outline" size="sm">
+                <Button variant="outline" size="sm" className="h-9">
                   View Details
                 </Button>
               </Link>
               <Link href={`/services/${service.slug}`}>
-                <Button variant="ghost" size="sm">
+                <Button variant="ghost" size="sm" className="h-9">
                   View Service
                 </Button>
               </Link>
@@ -406,7 +368,6 @@ async function ProfileContent() {
 
       if (servicesError) {
         console.error('Error fetching services:', servicesError);
-        // Don't throw here, just log - we can still show bookings without full service details
       } else {
         services?.forEach((service) => {
           servicesMap.set(service.id, service);
@@ -418,146 +379,139 @@ async function ProfileContent() {
     const stats = calculateStats(safeBookings);
     const memberSince = formatDate(user.created_at, {
       year: 'numeric',
-      month: 'long',
-      day: 'numeric',
+      month: 'long'
     });
 
     return (
       <div className="min-h-screen">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          {/* Header */}
-          <header className="mb-8">
-            <div className="flex items-center space-x-4 mb-4">
-              <div className="bg-blue-100 rounded-full p-3">
-                <User className="h-8 w-8 text-blue-600" aria-hidden="true" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+          {/* Enhanced Header */}
+          <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-6">
+                <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-md">
+                  <User className="h-10 w-10 text-white" />
+                </div>
+                <div>
+                  <h1 className="text-3xl font-bold text-gray-900 mb-2">
+                    Welcome back!
+                  </h1>
+                  <p className="text-gray-600 text-lg mb-1">{user.email}</p>
+                  <div className="flex items-center space-x-4 text-sm text-gray-500">
+                    <span>Member since {memberSince}</span>
+                    <span>•</span>
+                    <div className="flex items-center space-x-1">
+                      <Star className="h-4 w-4 mr-1 text-amber-400 fill-current" />
+                      <Badge className={`border ${getAdventureLevelColor(stats.adventureLevel)}`}>
+                        {stats.adventureLevel}
+                      </Badge>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div>
-                <h1 className="text-3xl font-bold text-gray-900">Welcome back!</h1>
-                <p className="text-gray-600" aria-label={`User email: ${user.email}`}>
-                  {user.email}
-                </p>
-              </div>
+              <Link href="/services">
+                <Button size="lg" className="px-8 h-12 text-base">
+                  Book New Adventure
+                </Button>
+              </Link>
             </div>
-          </header>
+          </div>
 
-          {/* Stats Cards */}
-          <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8" aria-label="Account statistics">
+          {/* Enhanced Stats Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <StatsCard
               title="Total Bookings"
               value={stats.totalBookings}
               icon={Calendar}
-              gradient="bg-gradient-to-r from-blue-500 to-blue-600"
+              subtitle="All time"
             />
             <StatsCard
               title="Confirmed"
               value={stats.confirmedBookings}
               icon={Award}
-              gradient="bg-gradient-to-r from-green-500 to-green-600"
+              subtitle="Successfully booked"
             />
             <StatsCard
               title="Upcoming"
               value={stats.upcomingBookings}
               icon={TrendingUp}
-              gradient="bg-gradient-to-r from-purple-500 to-purple-600"
+              subtitle="Future adventures"
             />
-          </section>
+            <StatsCard
+              title="Adventure Level"
+              value={stats.adventureLevel}
+              icon={Star}
+              subtitle={`${stats.totalBookings} completed`}
+            />
+          </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-            {/* Account Information */}
-            <aside className="lg:col-span-1">
-              <Card className="sticky top-8">
-                <CardHeader>
-                  <CardTitle className="flex items-center space-x-2">
-                    <User className="h-5 w-5" aria-hidden="true" />
-                    <span>Account Info</span>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="p-4 bg-gray-50 rounded-lg">
-                    <p className="text-sm text-gray-500 mb-1">Member Since</p>
-                    <p className="font-medium text-gray-900">
-                      {memberSince}
-                    </p>
+          {/* Full Width Bookings Section */}
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100">
+            <div className="p-8 border-b border-gray-100">
+              <div className="flex items-center justify-between">
+                <div>
+                  <h2 className="text-2xl font-bold text-gray-900">My Adventures</h2>
+                  <p className="text-gray-600 mt-1">Your booking history and upcoming experiences</p>
+                </div>
+                {stats.totalBookings > 0 && (
+                  <Badge variant="outline" className="px-3 py-1 text-sm font-medium">
+                    {stats.totalBookings} total bookings
+                  </Badge>
+                )}
+              </div>
+            </div>
+
+            <div className="p-8">
+              {safeBookings.length === 0 ? (
+                <div className="text-center py-16">
+                  <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Calendar className="h-12 w-12 text-gray-400" />
                   </div>
-                  <div className="p-4 bg-gray-50 rounded-lg">
-                    <p className="text-sm text-gray-500 mb-1">Adventure Level</p>
-                    <div className="flex items-center space-x-2">
-                      <Badge className="bg-blue-100 text-blue-800">
-                        {stats.adventureLevel}
-                      </Badge>
-                    </div>
-                  </div>
-                  <Link href="/services" className="w-full">
-                    <Button className="w-full mt-4">Book New Adventure</Button>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                    No adventures yet
+                  </h3>
+                  <p className="text-gray-600 mb-8 max-w-md mx-auto">
+                    Ready to start your adventure journey? Explore our exciting services and book your first experience!
+                  </p>
+                  <Link href="/services">
+                    <Button size="lg" className="px-8 h-12">
+                      Explore Adventures
+                    </Button>
                   </Link>
-                </CardContent>
-              </Card>
-            </aside>
+                </div>
+              ) : (
+                <div className="space-y-4">
+                  {safeBookings.map((booking) => {
+                    const service = servicesMap.get(booking.service_id);
+                    if (!service) {
+                      const fallbackService: Service = {
+                        id: booking.service_id,
+                        name: 'Service Unavailable',
+                        slug: '#',
+                        category: 'unknown',
+                        duration: 'N/A',
+                        images: []
+                      };
+                      return (
+                        <BookingCard 
+                          key={booking.id} 
+                          booking={booking} 
+                          service={fallbackService} 
+                        />
+                      );
+                    }
 
-            {/* Bookings */}
-            <main className="lg:col-span-3">
-              <Card>
-                <CardHeader>
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <CardTitle className="text-xl">My Adventures</CardTitle>
-                      <CardDescription>Your booking history and upcoming adventures</CardDescription>
-                    </div>
-                    {stats.totalBookings > 0 && (
-                      <Badge variant="outline" className="text-sm">
-                        {stats.totalBookings} total
-                      </Badge>
-                    )}
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  {safeBookings.length === 0 ? (
-                    <div className="text-center py-16">
-                      <div className="bg-gray-100 rounded-full p-6 w-24 h-24 mx-auto mb-6 flex items-center justify-center">
-                        <Calendar className="h-12 w-12 text-gray-400" aria-hidden="true" />
-                      </div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-3">No adventures yet</h3>
-                      <p className="text-gray-600 mb-8 max-w-md mx-auto">
-                        Ready to start your adventure journey? Explore our exciting services and book your first experience!
-                      </p>
-                      <Link href="/services">
-                        <Button size="lg" className="px-8">
-                          Explore Adventures
-                        </Button>
-                      </Link>
-                    </div>
-                  ) : (
-                    <div className="space-y-4" role="list" aria-label="Your bookings">
-                      {safeBookings.map((booking) => {
-                        const service = servicesMap.get(booking.service_id);
-                        if (!service) {
-                          // Create a fallback service object
-                          const fallbackService: Service = {
-                            id: booking.service_id,
-                            name: 'Service Unavailable',
-                            slug: '#',
-                            category: 'unknown',
-                            duration: 'N/A',
-                            images: []
-                          };
-                          return (
-                            <div key={booking.id} role="listitem">
-                              <BookingCard booking={booking} service={fallbackService} />
-                            </div>
-                          );
-                        }
-
-                        return (
-                          <div key={booking.id} role="listitem">
-                            <BookingCard booking={booking} service={service} />
-                          </div>
-                        );
-                      })}
-                    </div>
-                  )}
-                </CardContent>
-              </Card>
-            </main>
+                    return (
+                      <BookingCard 
+                        key={booking.id} 
+                        booking={booking} 
+                        service={service} 
+                      />
+                    );
+                  })}
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
