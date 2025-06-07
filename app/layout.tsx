@@ -4,6 +4,7 @@ import { ThemeProvider } from "next-themes";
 import "./globals.css";
 import Footer from "@/components/shared/footer";
 import Header from "@/components/shared/header";
+import BottomNav from "@/components/shared/bottom-nav";
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -39,6 +40,7 @@ export default function RootLayout({
           <div className="px-6 md:px-20 py-80 md:py-80 pt-16 md:pt-28 pb-16 md:pb-20">
             {children}
           </div>
+          <BottomNav/>
           <Footer />
         </ThemeProvider>
       </body>
