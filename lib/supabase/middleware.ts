@@ -39,7 +39,18 @@ export async function updateSession(request: NextRequest) {
     data: { user },
   } = await supabase.auth.getUser();
 
-  const publicRoutes = ["/", "/login", "/about", "/services", "/contact","/booking-confirmation"];   
+  const publicRoutes = ["/kayaking","/rafting", "/about", "/services", "/contact","/booking-confirmation"];   
+  const authRoutes = ['/auth/login', '/auth/sign-up'];
+
+  const { pathname } = request.nextUrl;
+
+  // 1️⃣ Redirect logged-in users away from auth pages
+  if (user && authRoutes.includes(pathname)) {
+    const url = request.nextUrl.clone();
+    url.pathname = '/';
+    return NextResponse.redirect(url);
+  }
+
   if (
     request.nextUrl.pathname !== "/" &&
     !user &&

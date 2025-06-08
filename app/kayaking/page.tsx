@@ -88,7 +88,7 @@ export default async function KayakingPage() {
                             </div>
                         </div>
                         
-                        <div className="bg-foreground/5 p-8 rounded-2xl shadow-sm">
+                        <div className="bg-background p-8 rounded-2xl shadow-sm">
                             <h3 className="text-xl font-semibold text-foreground mb-4">Perfect for Learning</h3>
                             <p className="text-foreground mb-6">Learning to kayak takes time and patience. We recommend planning at least 4-5 days for a basic course—it&apos;s always better with a friend for both fun and future paddling adventures.</p>
                             
@@ -190,7 +190,7 @@ export default async function KayakingPage() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="bg-foreground/5 p-6 rounded-xl">
+                                <div className="bg-background p-6 rounded-xl">
                                     <h4 className="font-semibold text-foreground mb-3">Highlighted Section</h4>
                                     <p className="text-foreground mb-4"><strong>Shivanandi to Rudraprayag:</strong> A thrilling 13km run with numerous Class 3-4 rapids, including the spectacular Goats-Leap Gorge (Kakkar Fall) entry above Rudraprayag.</p>
                                     <div className="text-sm text-gray-500">Perfect for intermediate to advanced kayakers seeking technical challenges</div>
@@ -201,7 +201,7 @@ export default async function KayakingPage() {
                         {/* Mandakini River */}
                         <div className="bg-foreground/5 rounded-2xl p-8 shadow-sm">
                             <div className="grid md:grid-cols-2 gap-8 items-center">
-                                <div className="bg-foreground/5 p-6 rounded-xl">
+                                <div className="bg-background p-6 rounded-xl">
                                     <h4 className="font-semibold text-foreground mb-3">The Hidden Gem</h4>
                                     <p className="text-foreground mb-4">The secret is out! The Mandakini provides some of the finest Class V Alpine Himalayan kayaking experiences, just 10 kilometers from our lodge.</p>
                                     <div className="text-sm text-gray-500">Joins the Alaknanda at the sacred town of Rudraprayag</div>
