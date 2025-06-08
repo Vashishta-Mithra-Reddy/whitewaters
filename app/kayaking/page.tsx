@@ -12,7 +12,7 @@ export default async function KayakingPage() {
                 <div className="max-w-4xl mx-auto">
                     <div className="inline-flex items-center gap-2 bg-blue-50 px-4 py-2 rounded-full text-blue-700 text-sm font-medium mb-6">
                         <Waves className="w-4 h-4" />
-                        Shivanandi River Lodge
+                        White Waters
                     </div>
                     <h1 className="text-5xl font-bold text-foreground mb-6 leading-tight">
                         Master the Art of <span className="text-blue-600">Kayaking</span> in the Indian Himalayas
