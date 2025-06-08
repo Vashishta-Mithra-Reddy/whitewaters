@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { AuthButton } from "../auth-button";
+import Navigation from "./navigation";
 
 export default function Header() {
 return (
@@ -8,26 +9,7 @@ return (
             <div className="flex gap-5 items-center font-semibold">
               <Link href={"/"} className="text-xl font-bold">White Waters</Link>
             </div>
-            <div className="hidden md:flex gap-10">
-              {/* <Link href={"/services"} className="text-foreground px-5 py-2 rounded-lg hover:text-foreground hover:bg-background/50">
-                Services
-              </Link> */}
-              <Link href={"/kayaking"} className="text-foreground px-5 py-2 rounded-lg hover:text-foreground hover:bg-background/80 active:bg-background/80">
-                Kayaking
-              </Link>
-              <Link href={"/rafting"} className="text-foreground px-5 py-2 rounded-lg hover:text-foreground hover:bg-background/80">
-                Rafting
-              </Link> 
-              {/* <Link href={"/about"} className="text-muted-foreground">
-                About
-              </Link>
-              <Link href={"/contact"} className="text-muted-foreground">
-                Contact
-              </Link> */}
-              {/* {user && <Link href={"/profile"} className="text-muted-foreground">
-                Profile
-              </Link>} */}
-            </div>
+            <Navigation />
             <AuthButton />
           </div>
         </nav>
