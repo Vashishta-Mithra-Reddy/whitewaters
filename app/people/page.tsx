@@ -82,9 +82,9 @@ export default function PeoplePage() {
         <div className="mt-16 bg-card p-8 rounded-lg">
           <h2 className="text-2xl font-semibold mb-6 text-center">Join Our Team</h2>
           <p className="text-center mb-8">
-            We're always looking for passionate individuals to join our team. 
+            We&apos;re always looking for passionate individuals to join our team. 
             If you love adventure and want to be part of something special, 
-            we'd love to hear from you.
+            we&apos;d love to hear from you.
           </p>
           <div className="text-center">
             <a

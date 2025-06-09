@@ -20,7 +20,7 @@ export default async function HikingPage() {
                     <div className="flex justify-center mb-8">
                         <div className="inline-flex items-center gap-2 bg-gradient-to-r from-green-50 to-blue-50 px-6 py-3 rounded-full text-green-700 text-sm font-medium border border-green-100">
                             <Footprints className="w-4 h-4" />
-                            Step into Nature's Embrace
+                            Step into Nature&apos;s Embrace
                         </div>
                     </div>
 
@@ -320,7 +320,7 @@ export default async function HikingPage() {
                 <div className="max-w-4xl mx-auto text-center">
                     <h2 className="text-3xl font-bold text-foreground mb-6">Take That First Step Today</h2>
                     <p className="text-lg text-foreground mb-8">
-                        Your perfect hiking adventure is just a step away. Whether you're seeking solitude, 
+                        Your perfect hiking adventure is just a step away. Whether you&apos;re seeking solitude, 
                         family fun, or Instagram-worthy views, we have the trail that speaks to your heart.
                     </p>
                     

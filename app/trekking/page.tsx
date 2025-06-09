@@ -94,7 +94,7 @@ export default async function TrekkingPage() {
                         
                         <div className="bg-background p-8 rounded-2xl shadow-sm">
                             <h3 className="text-xl font-semibold text-foreground mb-4">Your Himalayan Adventure</h3>
-                            <p className="text-foreground mb-6">We craft each trek to match your group's experience and aspirations. From gentle valley walks to challenging high-altitude expeditions, every journey is designed to push your boundaries while keeping you safe.</p>
+                            <p className="text-foreground mb-6">We craft each trek to match your group&apos;s experience and aspirations. From gentle valley walks to challenging high-altitude expeditions, every journey is designed to push your boundaries while keeping you safe.</p>
                             
                             <div className="grid grid-cols-2 gap-4 text-sm">
                                 <div className="flex items-center gap-2">
@@ -189,7 +189,7 @@ export default async function TrekkingPage() {
                                         </div>
                                         <h3 className="text-2xl font-bold text-foreground">Roopkund - Mystery Lake Trek</h3>
                                     </div>
-                                    <p className="text-foreground mb-6">Known as the "Skeleton Lake," this challenging high-altitude trek leads to one of the most mysterious places in the Himalayas. Ancient human remains and stunning alpine scenery make this an unforgettable adventure.</p>
+                                    <p className="text-foreground mb-6">Known as the Skeleton Lake, this challenging high-altitude trek leads to one of the most mysterious places in the Himalayas. Ancient human remains and stunning alpine scenery make this an unforgettable adventure.</p>
                                     
                                     <div className="grid md:grid-cols-2 gap-6">
                                         <div>
@@ -371,10 +371,10 @@ export default async function TrekkingPage() {
             {/* Call to Adventure */}
             <section className="py-20 px-4">
                 <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="text-3xl font-bold text-foreground mb-6">Ready to Answer the Mountain's Call?</h2>
+                    <h2 className="text-3xl font-bold text-foreground mb-6">Ready to Answer the Mountain&apos;s Call?</h2>
                     <p className="text-lg text-foreground mb-8">
                         From gentle valley walks to challenging summit attempts, the Himalayas offer adventures 
-                        that transform perspectives and create lifelong memories. Let us guide you to peaks you've 
+                        that transform perspectives and create lifelong memories. Let us guide you to peaks you&apos;ve 
                         only dreamed of reaching.
                     </p>
                     
