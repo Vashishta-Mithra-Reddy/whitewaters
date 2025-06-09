@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Navigation() {
     const pathname = usePathname();
     return (
-        <div className="hidden md:flex gap-10">
+        <div className="hidden md:flex gap-4">
               {/* <Link href={"/services"} className="text-foreground px-5 py-2 rounded-lg hover:text-foreground hover:bg-background/50">
                 Services
               </Link> */}
@@ -14,6 +14,15 @@ export default function Navigation() {
               </Link>
               <Link href={"/rafting"} className={`text-foreground px-5 py-2 rounded-lg hover:text-foreground hover:bg-background/50 ${pathname==="/rafting"?"bg-background/50":""}`}>
                 Rafting
+              </Link> 
+              <Link href={"/hiking"} className={`text-foreground px-5 py-2 rounded-lg hover:text-foreground hover:bg-background/50 ${pathname==="/hiking"?"bg-background/50":""}`}>
+                Hiking
+              </Link>
+              <Link href={"/trekking"} className={`text-foreground px-5 py-2 rounded-lg hover:text-foreground hover:bg-background/50 ${pathname==="/trekking"?"bg-background/50":""}`}>
+                Trekking
+              </Link> 
+              <Link href={"/pilgrimage"} className={`text-foreground px-5 py-2 rounded-lg hover:text-foreground hover:bg-background/50 ${pathname==="/pilgrimage"?"bg-background/50":""}`}>
+                Pilgrimage
               </Link> 
               {/* <Link href={"/about"} className="text-muted-foreground">
                 About

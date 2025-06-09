@@ -4,24 +4,24 @@ import { Waves, Moon, Users, Mountain, Calendar, Star, Compass } from "lucide-re
 import { Metadata } from "next";
 
 export const metadata:Metadata = {
-    title: 'Rafting | White Waters',
-    description: 'Explore the magic of river rafting in the Indian Himalayas',
+    title: 'Pilgrimage | White Waters',
+    description: 'Explore spiritual bliss by opting to our pilgrimage services',
 }
 
-export default async function RaftingPage() {
-    const services = await getServicesByCategory({ category: 'rafting' });
+export default async function PilgrimagePage() {
+    const services = await getServicesByCategory({ category: 'pilgrimage' });
     
     return (
         <div className="min-h-screen max-w-7xl">
             {/* Hero Section */}
             <section className="relative pb-20 pt-8 px-4 text-center">
                 <div className="max-w-4xl mx-auto">
-                    <div className="inline-flex items-center gap-2 bg-blue-50 px-4 py-2 rounded-full text-blue-700 text-sm font-medium mb-6">
+                    <div className="inline-flex items-center gap-2 bg-yellow-50 px-4 py-2 rounded-full text-yellow-300 text-sm font-medium mb-6">
                         <Waves className="w-4 h-4" />
                         White Waters
                     </div>
-                    <h1 className="text-6xl font-bold text-foreground mb-6 leading-tight">
-                        Experience the Magic of <span className="text-blue-600">River Rafting</span> in the Indian Himalayas
+                    <h1 className="text-5xl font-bold text-foreground mb-6 leading-tight">
+                        Experience the Magic of <span className="text-yellow-300">River Rafting</span> in the Indian Himalayas
                     </h1>
                     <p className="text-xl text-foreground mb-8 leading-relaxed">
                         From the silent calm of gently flowing waters to the thunderous roar of rapids—discover why a moonlit night 

@@ -1,6 +1,12 @@
 import { SpecificServiceGrid } from "@/components/specific-service-grid";
 import { getServicesByCategory } from "@/lib/supabase/services";
 import { Waves, Users, MapPin, Trophy, Mountain, Heart, Clock, Shield } from "lucide-react";
+import { Metadata } from "next";
+
+export const metadata:Metadata = {
+    title: 'Kayaking | White Waters',
+    description: 'Discover the thrill of whitewater kayaking at Shivanandi. Our expert instructors guide you through the Ganges catchment and the Alaknanda river, ensuring a safe and unforgettable experience.',
+}
 
 export default async function KayakingPage() {
     const services = await getServicesByCategory({ category: 'kayaking' });
@@ -14,7 +20,7 @@ export default async function KayakingPage() {
                         <Waves className="w-4 h-4" />
                         White Waters
                     </div>
-                    <h1 className="text-5xl font-bold text-foreground mb-6 leading-tight">
+                    <h1 className="text-6xl font-bold text-foreground mb-6 leading-tight">
                         Master the Art of <span className="text-blue-600">Kayaking</span> in the Indian Himalayas
                     </h1>
                     <p className="text-xl text-foreground mb-8 leading-relaxed">

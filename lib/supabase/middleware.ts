@@ -39,7 +39,7 @@ export async function updateSession(request: NextRequest) {
     data: { user },
   } = await supabase.auth.getUser();
 
-  const publicRoutes = ["/kayaking","/rafting", "/about", "/services", "/contact","/booking-confirmation"];   
+  const publicRoutes = ["/kayaking","/rafting", "/about", "/contact", "/people", "/the-place", "/services", "/contact","/booking-confirmation","/trekking","/hiking","/pilgrimage"];   
   const authRoutes = ['/auth/login', '/auth/sign-up'];
 
   const { pathname } = request.nextUrl;
