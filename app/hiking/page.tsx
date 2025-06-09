@@ -26,7 +26,7 @@ export default async function HikingPage() {
 
                     {/* Main Hero Content */}
                     <div className="text-center mb-12">
-                        <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
+                        <h1 className="text-6xl font-bold text-foreground mb-6 leading-tight">
                             Discover the Joy of 
                             <span className="block text-green-600 mt-2">Simple Walking</span>
                         </h1>
