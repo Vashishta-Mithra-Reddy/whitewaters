@@ -16,7 +16,7 @@ export default function Home() {
                     <div className="absolute bottom-48 left-1/4 text-5xl animate-pulse">🛶</div>
                     <div className="absolute bottom-1/4 right-1/4 text-3xl animate-pulse">🚣</div>
                     <div className="absolute top-40 left-1/4 text-4xl animate-pulse">🌊</div>
-                    <div className="absolute top-80 right-60 text-3xl animate-pulse"><MountainSnow className="w-12 h-12" /></div>
+                    <div className="hidden md:flex absolute top-80 right-60 text-3xl animate-pulse"><MountainSnow className="w-12 h-12" /></div>
         </div>
         <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 leading-tight tracking-tight">
           Adventure Awaits in
