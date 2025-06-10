@@ -1,7 +1,7 @@
 // import Hero from "@/components/hero";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MountainSnow } from "lucide-react";
+import { ArrowRight} from "lucide-react";
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col items-center">
@@ -10,20 +10,20 @@ export default function Home() {
         <div className="flex flex-col gap-16 items-center">
       {/* Hero Section */}
       <div className="text-center space-y-6 max-w-4xl pt-8 md:pt-16">
-      <div className="absolute inset-0 opacity-25">
+      {/* <div className="absolute inset-0 opacity-25">
                     <div className="absolute top-80 left-40 text-6xl animate-pulse">🏞️</div>
                     <div className="absolute top-40 right-1/4 text-4xl animate-pulse">🌲</div>
                     <div className="absolute bottom-48 left-1/4 text-5xl animate-pulse">🛶</div>
                     <div className="absolute bottom-1/4 right-1/4 text-3xl animate-pulse">🚣</div>
                     <div className="absolute top-40 left-1/4 text-4xl animate-pulse">🌊</div>
                     <div className="hidden md:flex absolute top-80 right-60 text-3xl animate-pulse"><MountainSnow className="w-12 h-12" /></div>
-        </div>
+        </div> */}
         <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 leading-tight tracking-tight">
           Adventure Awaits in
           <span className="block text-blue-600">Pristine Waters</span>
         </h1>
         <p className="text-xl md:text-2xl text-muted-foreground">
-          Experience the thrill of kayaking, rafting, and mountain expeditions with <br></br> White Waters.
+          Experience the thrill of kayaking, rafting, and mountain expeditions <br></br>with White Waters.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button size="lg" asChild>
