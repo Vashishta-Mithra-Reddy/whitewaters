@@ -1,6 +1,6 @@
 import { SpecificServiceGrid } from "@/components/specific-service-grid";
 import { getServicesByCategory } from "@/lib/supabase/services";
-import { Mountain, Compass, Users, Star, Calendar, Sunrise, TreePine, MapPin } from "lucide-react";
+import { Mountain, Compass, Users, Star, Calendar, Sunrise, TreePine, MapPin, Footprints } from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -15,6 +15,15 @@ export default async function TrekkingPage() {
         <div className="min-h-screen max-w-7xl">
             {/* Hero Section */}
             <section className="relative pb-20 pt-8 px-4 text-center">
+                {/* Animated Background Elements */}
+                <div className="absolute inset-0 opacity-25">
+                    <div className="absolute top-32 left-10 text-6xl animate-pulse">🏞️</div>
+                    <div className="absolute top-20 right-20 text-4xl animate-bounce">🌲</div>
+                    <div className="absolute bottom-20 left-20 text-5xl animate-pulse">🌳</div>
+                    <div className="absolute bottom-10 right-10 text-3xl animate-bounce">🥾</div>
+                    <div className="absolute top-2 left-1/4 text-4xl animate-pulse"><Footprints className="w-12 h-12" /></div>
+                    <div className="absolute top-1/3 left-3/4 text-3xl animate-pulse"><Mountain className="w-12 h-12" /></div>
+                </div>
                 <div className="max-w-4xl mx-auto">
                     <div className="inline-flex items-center gap-2 bg-green-50 px-4 py-2 rounded-full text-green-700 text-sm font-medium mb-6">
                         <Mountain className="w-4 h-4" />
