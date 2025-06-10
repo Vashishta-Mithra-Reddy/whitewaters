@@ -61,7 +61,7 @@ export default async function RaftingPage() {
             </section>
 
             {/* Experience the Magic */}
-            <section className="py-20 px-4 bg-foreground/5 rounded-xl">
+            <section className="py-20 px-4 bg-[#b1e3fa]/10 rounded-xl">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl font-bold text-foreground mb-4">Why Rafting Touches Your Soul</h2>
@@ -101,7 +101,7 @@ export default async function RaftingPage() {
                             </div>
                         </div>
                         
-                        <div className="bg-background p-8 rounded-2xl shadow-sm">
+                        <div className="bg-background p-8 rounded-2xl">
                             <h3 className="text-xl font-semibold text-foreground mb-4">The Full Experience</h3>
                             <p className="text-foreground mb-6">We help you choose the perfect descent based on your group&apos;s experience and adventure appetite. From gentle Class II waters to heart-pounding Class V rapids, every journey is tailored to your desires.</p>
                             
@@ -138,7 +138,7 @@ export default async function RaftingPage() {
                     
                     <div className="space-y-12">
                         {/* Alaknanda River Rafting */}
-                        <div className="rounded-2xl p-8 shadow-sm border border-foreground/20">
+                        <div className="rounded-2xl p-8  border-2 border-foreground/20 border-dashed">
                             <div className="grid md:grid-cols-3 gap-8">
                                 <div className="md:col-span-2">
                                     <div className="flex items-center gap-3 mb-4">
@@ -189,7 +189,7 @@ export default async function RaftingPage() {
                         </div>
                         
                         {/* Mandakini River Rafting */}
-                        <div className="rounded-2xl p-8 shadow-sm border border-foreground/20">
+                        <div className="rounded-2xl p-8  border-2 border-foreground/20 border-dashed">
                             <div className="grid md:grid-cols-3 gap-8">
                                 <div className="md:col-span-2">
                                     <div className="flex items-center gap-3 mb-4">
@@ -233,7 +233,7 @@ export default async function RaftingPage() {
                         </div>
                         
                         {/* Pindar River Rafting */}
-                        <div className=" rounded-2xl p-8 shadow-sm border border-foreground/20">
+                        <div className=" rounded-2xl p-8  border-2 border-foreground/20 border-dashed">
                             <div className="grid md:grid-cols-3 gap-8">
                                 <div className="md:col-span-2">
                                     <div className="flex items-center gap-3 mb-4">
@@ -296,7 +296,7 @@ export default async function RaftingPage() {
                     </div>
                     
                     <div className="grid md:grid-cols-2 gap-8">
-                        <div className="bg-foreground/5 p-8 rounded-2xl shadow-sm">
+                        <div className="p-8 rounded-2xl  border-2 border-foreground/20 border-dashed">
                             <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
                                 <Star className="w-6 h-6 text-blue-600" />
                             </div>
@@ -309,7 +309,7 @@ export default async function RaftingPage() {
                             </div>
                         </div>
                         
-                        <div className="bg-foreground/5 p-8 rounded-2xl shadow-sm">
+                        <div className="p-8 rounded-2xl  border-2 border-foreground/20 border-dashed">
                             <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
                                 <Users className="w-6 h-6 text-green-600" />
                             </div>
@@ -322,7 +322,7 @@ export default async function RaftingPage() {
                             </div>
                         </div>
                         
-                        <div className="bg-foreground/5 p-8 rounded-2xl shadow-sm">
+                        <div className="p-8 rounded-2xl  border-2 border-foreground/20 border-dashed">
                             <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
                                 <Moon className="w-6 h-6 text-purple-600" />
                             </div>
@@ -335,7 +335,7 @@ export default async function RaftingPage() {
                             </div>
                         </div>
                         
-                        <div className="bg-foreground/5 p-8 rounded-2xl shadow-sm">
+                        <div className="p-8 rounded-2xl  border-2 border-foreground/20 border-dashed">
                             <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
                                 <Mountain className="w-6 h-6 text-orange-600" />
                             </div>

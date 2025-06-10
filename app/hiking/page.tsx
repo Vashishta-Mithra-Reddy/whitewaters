@@ -17,7 +17,7 @@ export default async function HikingPage() {
             <section className="relative pb-16 pt-8 px-4">
                 {/* Animated Background Elements */}
                 <div className="absolute inset-0 opacity-25">
-                    <div className="absolute top-10 left-10 text-6xl animate-pulse">🏔️</div>
+                    <div className="absolute top-10 left-10 text-6xl animate-pulse opacity-10">🏔️</div>
                     <div className="absolute top-20 right-20 text-4xl animate-bounce">🌳</div>
                     <div className="absolute bottom-20 left-20 text-5xl animate-pulse">🌲</div>
                     <div className="absolute bottom-10 right-10 text-3xl animate-bounce">🥾</div>

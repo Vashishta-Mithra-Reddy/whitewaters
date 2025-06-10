@@ -61,7 +61,7 @@ export default async function KayakingPage() {
             </section>
 
             {/* Our Story */}
-            <section className="py-20 px-4 bg-foreground/5 rounded-xl">
+            <section className="py-20 px-4 bg-[#b1e3fa]/10 rounded-xl">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl font-bold text-foreground mb-4">Why We Love the River Most in a Kayak</h2>
@@ -103,7 +103,7 @@ export default async function KayakingPage() {
                             </div>
                         </div>
                         
-                        <div className="bg-background p-8 rounded-2xl shadow-sm">
+                        <div className="bg-background p-8 rounded-2xl">
                             <h3 className="text-xl font-semibold text-foreground mb-4">Perfect for Learning</h3>
                             <p className="text-foreground mb-6">Learning to kayak takes time and patience. We recommend planning at least 4-5 days for a basic course—it&apos;s always better with a friend for both fun and future paddling adventures.</p>
                             
@@ -132,7 +132,7 @@ export default async function KayakingPage() {
                     <h2 className="text-3xl font-bold text-center text-foreground mb-16">Our Kayaking Programs</h2>
                     
                     <div className="grid md:grid-cols-3 gap-8">
-                        <div className="bg-foreground/5 p-8 rounded-2xl shadow-sm border border-foreground/20 hover:shadow-md transition-shadow">
+                        <div className="p-8 rounded-2xl border-2 border-dashed border-foreground/20 transition-shadow">
                             <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
                                 <Clock className="w-8 h-8 text-blue-600" />
                             </div>
@@ -145,7 +145,7 @@ export default async function KayakingPage() {
                             </div>
                         </div>
                         
-                        <div className="bg-foreground/5 p-8 rounded-2xl shadow-sm border border-foreground/20 hover:shadow-md transition-shadow">
+                        <div className="p-8 rounded-2xl border-2 border-dashed border-foreground/20 transition-shadow">
                             <div className="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mb-6">
                                 <Trophy className="w-8 h-8 text-green-600" />
                             </div>
@@ -158,7 +158,7 @@ export default async function KayakingPage() {
                             </div>
                         </div>
                         
-                        <div className="bg-foreground/5 p-8 rounded-2xl shadow-sm border border-foreground/20 hover:shadow-md transition-shadow">
+                        <div className="p-8 rounded-2xl border-2 border-dashed border-foreground/20 transition-shadow">
                             <div className="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
                                 <Users className="w-8 h-8 text-purple-600" />
                             </div>
@@ -184,7 +184,7 @@ export default async function KayakingPage() {
                     
                     <div className="space-y-12">
                         {/* Alaknanda River */}
-                        <div className="bg-foreground/5 rounded-2xl p-8 shadow-sm">
+                        <div className="rounded-2xl p-8 border-2 border-dashed border-foreground/20">
                             <div className="grid md:grid-cols-2 gap-8 items-center">
                                 <div>
                                     <h3 className="text-2xl font-bold text-foreground mb-4">Alaknanda River - Our Home River</h3>
@@ -205,7 +205,7 @@ export default async function KayakingPage() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="bg-background p-6 rounded-xl">
+                                <div className="bg-[#b1e3fa]/20 p-6 rounded-xl">
                                     <h4 className="font-semibold text-foreground mb-3">Highlighted Section</h4>
                                     <p className="text-foreground mb-4"><strong>Shivanandi to Rudraprayag:</strong> A thrilling 13km run with numerous Class 3-4 rapids, including the spectacular Goats-Leap Gorge (Kakkar Fall) entry above Rudraprayag.</p>
                                     <div className="text-sm text-gray-500">Perfect for intermediate to advanced kayakers seeking technical challenges</div>
@@ -214,10 +214,10 @@ export default async function KayakingPage() {
                         </div>
                         
                         {/* Mandakini River */}
-                        <div className="bg-foreground/5 rounded-2xl p-8 shadow-sm">
+                        <div className="rounded-2xl p-8 border-2 border-dashed border-foreground/20">
                             <div className="grid md:grid-cols-2 gap-8 items-center">
-                                <div className="bg-background p-6 rounded-xl">
-                                    <h4 className="font-semibold text-foreground mb-3">The Hidden Gem</h4>
+                                <div className="p-6 rounded-xl bg-[#b1e3fa]/20">
+                                    <h4 className="font-semibold text-foreground mb-3 ">The Hidden Gem</h4>
                                     <p className="text-foreground mb-4">The secret is out! The Mandakini provides some of the finest Class V Alpine Himalayan kayaking experiences, just 10 kilometers from our lodge.</p>
                                     <div className="text-sm text-gray-500">Joins the Alaknanda at the sacred town of Rudraprayag</div>
                                 </div>
@@ -244,7 +244,7 @@ export default async function KayakingPage() {
                         </div>
                         
                         {/* Pindar River */}
-                        <div className="bg-foreground/5 rounded-2xl p-8 shadow-sm">
+                        <div className="rounded-2xl p-8 border-2 border-dashed border-foreground/20">
                             <div className="text-center">
                                 <h3 className="text-2xl font-bold text-foreground mb-4">Pindar River</h3>
                                 <p className="text-foreground mb-6 max-w-3xl mx-auto">
