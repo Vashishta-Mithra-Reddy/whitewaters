@@ -103,7 +103,7 @@ export default async function KayakingPage() {
                             </div>
                         </div>
                         
-                        <div className="bg-background p-8 rounded-2xl">
+                        <div className="bg-background p-8 rounded-2xl border-2 border-foreground/20 border-dashed">
                             <h3 className="text-xl font-semibold text-foreground mb-4">Perfect for Learning</h3>
                             <p className="text-foreground mb-6">Learning to kayak takes time and patience. We recommend planning at least 4-5 days for a basic course—it&apos;s always better with a friend for both fun and future paddling adventures.</p>
                             

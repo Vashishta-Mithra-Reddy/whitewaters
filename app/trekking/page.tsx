@@ -101,7 +101,7 @@ export default async function TrekkingPage() {
                             </div>
                         </div>
                         
-                        <div className="bg-background p-8 rounded-2xl shadow-sm">
+                        <div className="bg-background p-8 rounded-2xl border-2 border-foreground/20 border-dashed">
                             <h3 className="text-xl font-semibold text-foreground mb-4">Your Himalayan Adventure</h3>
                             <p className="text-foreground mb-6">We craft each trek to match your group&apos;s experience and aspirations. From gentle valley walks to challenging high-altitude expeditions, every journey is designed to push your boundaries while keeping you safe.</p>
                             
@@ -138,7 +138,7 @@ export default async function TrekkingPage() {
                     
                     <div className="space-y-12">
                         {/* Valley of Flowers */}
-                        <div className="rounded-2xl p-8 shadow-sm border border-foreground/20">
+                        <div className="rounded-2xl p-8 border-2 border-foreground/20 border-dashed">
                             <div className="grid md:grid-cols-3 gap-8">
                                 <div className="md:col-span-2">
                                     <div className="flex items-center gap-3 mb-4">
@@ -189,7 +189,7 @@ export default async function TrekkingPage() {
                         </div>
                         
                         {/* Roopkund Trek */}
-                        <div className="rounded-2xl p-8 shadow-sm border border-foreground/20">
+                        <div className="rounded-2xl p-8 border-2 border-foreground/20 border-dashed">
                             <div className="grid md:grid-cols-3 gap-8">
                                 <div className="md:col-span-2">
                                     <div className="flex items-center gap-3 mb-4">
@@ -233,7 +233,7 @@ export default async function TrekkingPage() {
                         </div>
                         
                         {/* Kedarkantha Trek */}
-                        <div className="rounded-2xl p-8 shadow-sm border border-foreground/20">
+                        <div className="rounded-2xl p-8 border-2 border-foreground/20 border-dashed">
                             <div className="grid md:grid-cols-3 gap-8">
                                 <div className="md:col-span-2">
                                     <div className="flex items-center gap-3 mb-4">
@@ -296,7 +296,7 @@ export default async function TrekkingPage() {
                     </div>
                     
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div className="bg-background p-8 rounded-2xl shadow-sm">
+                        <div className="bg-background p-8 rounded-2xl border-2 border-foreground/20 border-dashed">
                             <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
                                 <Mountain className="w-6 h-6 text-green-600" />
                             </div>
@@ -309,7 +309,7 @@ export default async function TrekkingPage() {
                             </div>
                         </div>
                         
-                        <div className="bg-background p-8 rounded-2xl shadow-sm">
+                        <div className="bg-background p-8 rounded-2xl border-2 border-foreground/20 border-dashed">
                             <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
                                 <Compass className="w-6 h-6 text-blue-600" />
                             </div>
@@ -322,7 +322,7 @@ export default async function TrekkingPage() {
                             </div>
                         </div>
                         
-                        <div className="bg-background p-8 rounded-2xl shadow-sm">
+                        <div className="bg-background p-8 rounded-2xl border-2 border-foreground/20 border-dashed">
                             <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
                                 <TreePine className="w-6 h-6 text-orange-600" />
                             </div>
@@ -335,7 +335,7 @@ export default async function TrekkingPage() {
                             </div>
                         </div>
                         
-                        <div className="bg-background p-8 rounded-2xl shadow-sm">
+                        <div className="bg-background p-8 rounded-2xl border-2 border-foreground/20 border-dashed">
                             <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
                                 <Users className="w-6 h-6 text-purple-600" />
                             </div>
@@ -348,7 +348,7 @@ export default async function TrekkingPage() {
                             </div>
                         </div>
                         
-                        <div className="bg-background p-8 rounded-2xl shadow-sm">
+                        <div className="bg-background p-8 rounded-2xl border-2 border-foreground/20 border-dashed">
                             <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
                                 <Star className="w-6 h-6 text-red-600" />
                             </div>
@@ -361,7 +361,7 @@ export default async function TrekkingPage() {
                             </div>
                         </div>
                         
-                        <div className="bg-background p-8 rounded-2xl shadow-sm">
+                        <div className="bg-background p-8 rounded-2xl border-2 border-foreground/20 border-dashed">
                             <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
                                 <MapPin className="w-6 h-6 text-indigo-600" />
                             </div>

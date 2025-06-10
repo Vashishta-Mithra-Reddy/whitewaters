@@ -181,7 +181,7 @@ export default async function HikingPage() {
             </section>
 
             {/* Popular Hiking Trails - Card Grid */}
-            <section className="py-16 px-4 bg-foreground/5 rounded-xl">
+            <section className="py-16 px-4 rounded-xl">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl font-bold text-foreground mb-4">Popular Trails Near You</h2>
@@ -190,7 +190,7 @@ export default async function HikingPage() {
                     
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {/* Waterfall Trail */}
-                        <div className="bg-background rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                        <div className="bg-background rounded-2xl p-6 border-2 border-foreground/20 border-dashed">
                             <div className="flex items-center justify-between mb-4">
                                 <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
                                     <Sun className="w-5 h-5 text-blue-600" />
@@ -212,7 +212,7 @@ export default async function HikingPage() {
                         </div>
 
                         {/* Sunrise Point */}
-                        <div className="bg-background rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                        <div className="bg-background rounded-2xl p-6 border-2 border-foreground/20 border-dashed">
                             <div className="flex items-center justify-between mb-4">
                                 <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center">
                                     <Sun className="w-5 h-5 text-orange-600" />
@@ -234,7 +234,7 @@ export default async function HikingPage() {
                         </div>
 
                         {/* Forest Loop */}
-                        <div className="bg-background rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                        <div className="bg-background rounded-2xl p-6 border-2 border-foreground/20 border-dashed">
                             <div className="flex items-center justify-between mb-4">
                                 <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
                                     <TreePine className="w-5 h-5 text-green-600" />
@@ -256,7 +256,7 @@ export default async function HikingPage() {
                         </div>
 
                         {/* Village Trail */}
-                        <div className="bg-background rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                        <div className="bg-background rounded-2xl p-6 border-2 border-foreground/20 border-dashed">
                             <div className="flex items-center justify-between mb-4">
                                 <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
                                     <Heart className="w-5 h-5 text-purple-600" />
@@ -278,7 +278,7 @@ export default async function HikingPage() {
                         </div>
 
                         {/* Meadow Trail */}
-                        <div className="bg-background rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                        <div className="bg-background rounded-2xl p-6 border-2 border-foreground/20 border-dashed">
                             <div className="flex items-center justify-between mb-4">
                                 <div className="w-10 h-10 bg-pink-100 rounded-lg flex items-center justify-center">
                                     <Wind className="w-5 h-5 text-pink-600" />
@@ -300,7 +300,7 @@ export default async function HikingPage() {
                         </div>
 
                         {/* Night Hike */}
-                        <div className="bg-background rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                        <div className="bg-background rounded-2xl p-6 border-2 border-foreground/20 border-dashed">
                             <div className="flex items-center justify-between mb-4">
                                 <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center">
                                     <span className="text-gray-600">🌙</span>
