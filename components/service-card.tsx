@@ -56,7 +56,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
             Max {service.max_participants}
           </div>
         </div>
-        <Button asChild className="w-full">
+        <Button asChild className="w-full" size={"sm"}>
           <Link href={`/services/${service.slug}`}>
             View Details & Book
           </Link>
