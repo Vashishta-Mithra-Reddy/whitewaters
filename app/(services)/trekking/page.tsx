@@ -32,7 +32,7 @@ export default async function TrekkingPage() {
                     <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
                         Journey Through the <br></br><span className="text-green-600">Majestic Himalayas</span><br></br> on Foot
                     </h1>
-                    <p className="text-xl text-foreground mb-8 leading-relaxed">
+                    <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
                         From gentle valley walks to challenging high-altitude adventures—experience the raw beauty 
                         of the Indian Himalayas with expert guides who know every trail, every peak, and every story.
                     </p>

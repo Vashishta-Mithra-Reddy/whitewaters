@@ -39,7 +39,7 @@ export default async function HikingPage() {
                             Discover the Joy of 
                             <span className="block text-green-600 mt-2">Simple Walking</span>
                         </h1>
-                        <p className="text-lg md:text-xl text-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+                        <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
                             Sometimes the best adventures happen one step at a time. Join us for gentle hikes through 
                             pine forests, meadows full of wildflowers, and hidden waterfalls that refresh both body and soul.
                         </p>

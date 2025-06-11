@@ -32,7 +32,7 @@ export default async function KayakingPage() {
                     <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
                         Master the Art of <span className="text-blue-600">Kayaking</span> in the Indian Himalayas
                     </h1>
-                    <p className="text-xl text-foreground mb-8 leading-relaxed">
+                    <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
                         Discover why we chose this perfect river junction where endless glacial waters flow from peaks to plains. 
                         After 20+ years of first descents and Himalayan adventures, we have found the ultimate home for whitewater enthusiasts.
                     </p>
