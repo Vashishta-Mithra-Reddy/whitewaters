@@ -29,7 +29,7 @@ export default async function KayakingPage() {
                         <Waves className="w-4 h-4" />
                         White Waters
                     </div>
-                    <h1 className="text-6xl font-bold text-foreground mb-6 leading-tight">
+                    <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
                         Master the Art of <span className="text-blue-600">Kayaking</span> in the Indian Himalayas
                     </h1>
                     <p className="text-xl text-foreground mb-8 leading-relaxed">

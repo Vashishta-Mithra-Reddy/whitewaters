@@ -37,7 +37,7 @@ export default async function PilgrimagePage() {
 
                     {/* Main Hero */}
                     <div className="text-center mb-12">
-                        <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
+                        <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
                             Where Faith Meets 
                             <span className="block text-transparent bg-gradient-to-r from-[#F4C430] to-[#F4C430] bg-clip-text mt-2">The Mountains</span>
                         </h1>
@@ -104,7 +104,7 @@ export default async function PilgrimagePage() {
                             {/* Char Dham */}
                             <div className="relative grid md:grid-cols-2 gap-8 items-center">
                                 <div className="md:text-right">
-                                    <div className="bg-background p-8 rounded-2xl shadow-lg border-2 border-dashed border-orange-100 hover:shadow-xl transition-all duration-300">
+                                    <div className="bg-background p-8 rounded-2xl  border-4 border-dashed border-orange-100  transition-all duration-300">
                                         <div className="flex items-center gap-3 mb-4 md:justify-end">
                                             <h3 className="text-2xl font-bold text-foreground">Char Dham Yatra</h3>
                                             <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
@@ -137,7 +137,7 @@ export default async function PilgrimagePage() {
                                     </div> */}
                                 </div>
                                 <div>
-                                    <div className="bg-background p-8 rounded-2xl shadow-lg border-2 border-dashed border-blue-100 hover:shadow-xl transition-all duration-300">
+                                    <div className="bg-background p-8 rounded-2xl  border-4 border-dashed border-blue-100  transition-all duration-300">
                                         <div className="flex items-center gap-3 mb-4">
                                             <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
                                                 <span className="text-blue-600">🏔️</span>
@@ -159,7 +159,7 @@ export default async function PilgrimagePage() {
                             {/* Badrinath */}
                             <div className="relative grid md:grid-cols-2 gap-8 items-center">
                                 <div className="md:text-right">
-                                    <div className="bg-background p-8 rounded-2xl shadow-lg border-2 border-dashed border-purple-100 hover:shadow-xl transition-all duration-300">
+                                    <div className="bg-background p-8 rounded-2xl  border-4 border-dashed border-purple-100  transition-all duration-300">
                                         <div className="flex items-center gap-3 mb-4 md:justify-end">
                                             <h3 className="text-2xl font-bold text-foreground">Badrinath Temple</h3>
                                             <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
@@ -192,7 +192,7 @@ export default async function PilgrimagePage() {
                                     </div> */}
                                 </div>
                                 <div>
-                                    <div className="bg-background p-8 rounded-2xl shadow-lg border-2 border-dashed border-green-100 hover:shadow-xl transition-all duration-300">
+                                    <div className="bg-background p-8 rounded-2xl  border-4 border-dashed border-green-100  transition-all duration-300">
                                         <div className="flex items-center gap-3 mb-4">
                                             <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
                                                 <span className="text-green-600">❄️</span>

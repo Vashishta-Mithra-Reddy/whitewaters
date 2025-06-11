@@ -29,7 +29,7 @@ export default async function TrekkingPage() {
                         <Mountain className="w-4 h-4" />
                         White Waters Trekking
                     </div>
-                    <h1 className="text-6xl font-bold text-foreground mb-6 leading-tight">
+                    <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
                         Journey Through the <br></br><span className="text-green-600">Majestic Himalayas</span><br></br> on Foot
                     </h1>
                     <p className="text-xl text-foreground mb-8 leading-relaxed">

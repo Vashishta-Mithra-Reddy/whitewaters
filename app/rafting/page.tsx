@@ -29,7 +29,7 @@ export default async function RaftingPage() {
                         <Waves className="w-4 h-4" />
                         White Waters
                     </div>
-                    <h1 className="text-6xl font-bold text-foreground mb-6 leading-tight">
+                    <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
                         Experience the Magic of <span className="text-blue-600">River Rafting</span> in the Indian Himalayas
                     </h1>
                     <p className="text-xl text-foreground mb-8 leading-relaxed">
