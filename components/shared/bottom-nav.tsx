@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ShipWheel, ShipIcon, Mountain, Trees, MountainSnow } from "lucide-react";
+import { Waves, ShipIcon, Mountain, Trees, MountainSnow } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 export default function BottomNav() {
@@ -9,7 +9,7 @@ export default function BottomNav() {
   
   const navigationLinks = [
     // { href: "/", label: "Home", icon: <Home  className="h-5 w-5" /> },
-    { href: "/kayaking", label: "Kayaking", icon: <ShipWheel className="h-5 w-5" /> },
+    { href: "/kayaking", label: "Kayaking", icon: <Waves className="h-5 w-5" /> },
     { href: "/rafting", label: "Rafting", icon: <ShipIcon className="h-5 w-5" /> },
     { href: "/hiking", label: "Hiking", icon: <Trees className="h-5 w-5" /> },
     { href: "/trekking", label: "Trekking", icon: <Mountain className="h-5 w-5" /> },

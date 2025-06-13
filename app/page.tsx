@@ -1,7 +1,15 @@
-// import Hero from "@/components/hero";
+"use client";
+
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight} from "lucide-react";
+// import { ArrowRight} from "lucide-react";
+import SplitText from "@/components/SplitText";
+import AdventureModal from "@/components/AdventureModal";
+
+const handleAnimationComplete = () => {
+  console.log('Animation completed');
+};
+
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col items-center">
@@ -18,21 +26,31 @@ export default function Home() {
                     <div className="absolute top-40 left-1/4 text-4xl animate-pulse">🌊</div>
                     <div className="hidden md:flex absolute top-80 right-60 text-3xl animate-pulse"><MountainSnow className="w-12 h-12" /></div>
         </div> */}
-        <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 leading-tight tracking-tight">
+        <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-0 leading-tight tracking-tight">
           Adventure Awaits in
-          <span className="block text-blue-600">Pristine Waters</span>
+          {/* <span className="block text-blue-600">Pristine Waters</span> */}
+          <SplitText
+          text="Pristine Waters"
+          className="block text-blue-600 tracking-tight"
+          delay={100}
+          duration={3}
+          ease="elastic.out(1,0.3)"
+          splitType="chars"
+          from={{ opacity: 0, y: 40 }}
+          to={{ opacity: 1, y: 0 }}
+          threshold={0.1}
+          rootMargin="-100px"
+          textAlign="center"
+          onLetterAnimationComplete={handleAnimationComplete}
+        />
         </h1>
-        <p className="text-xl md:text-2xl text-muted-foreground">
+        <p className="text-xl md:text-2xl text-muted-foreground mt-0">
           Experience the thrill of kayaking, rafting, and mountain expeditions <br></br>with White Waters.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" asChild>
-            <Link href="/services">
-              Explore Adventures <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </Button>
+          <AdventureModal/>
           <Button size="lg" variant="outline" asChild>
-            <Link href="#contact">
+            <Link href="/contact">
               Contact Us
             </Link>
           </Button>
@@ -40,7 +58,7 @@ export default function Home() {
       </div>
       
       {/* Features Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl">
+      {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl">
         <div className="text-center space-y-4">
           <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto">
             <svg className="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
@@ -71,7 +89,7 @@ export default function Home() {
           <p className="text-muted-foreground">Simple booking process - no account required for one-time adventures</p>
         </div>
       </div>
-      
+       */}
       {/* Contact Info */}
       {/* <div id="contact" className="w-full max-w-4xl bg-muted/50 rounded-lg p-8">
         <h2 className="text-2xl font-bold text-center mb-6">Get in Touch</h2>
