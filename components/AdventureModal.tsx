@@ -89,7 +89,7 @@ const AdventureModal = () => {
             <div className="p-6">
               {/* Adventure Cards Grid */}
               <div className="grid grid-cols-3 gap-4 mb-6">
-                {adventures.map((adventure, index) => {
+                {adventures.map((adventure) => {
                   const Icon = adventure.icon;
                   return (
                     <div
