@@ -41,7 +41,7 @@ export default async function PilgrimagePage() {
                             Where Faith Meets 
                             <span className="block text-transparent bg-gradient-to-r from-[#F4C430] to-[#F4C430] bg-clip-text mt-2">The Mountains</span>
                         </h1>
-                        <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed">
+                        <p className="text-lg md:text-xl px-6 md:px-0 text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed">
                             Journey to ancient temples, sacred caves, and holy shrines nestled in the lap of the Himalayas. 
                             These are not just trips—they are transformative experiences that connect you with centuries 
                             of devotion, peace, and divine energy.
@@ -50,7 +50,7 @@ export default async function PilgrimagePage() {
                     </div>
 
                     {/* Sacred Statistics */}
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto mb-8">
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto mb-8 px-6 md:px-0">
                     {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto mb-8"> */}
                         <div className="bg-gradient-to-br from-orange-50 to-red-50 p-6 rounded-2xl text-center border border-orange-100 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                             <div className="text-2xl mb-2">🏔️</div>

@@ -27,11 +27,41 @@ export default function Home() {
                     <div className="hidden md:flex absolute top-80 right-60 text-3xl animate-pulse"><MountainSnow className="w-12 h-12" /></div>
         </div> */}
         <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-0 leading-tight tracking-tight">
-          Adventure Awaits in
+          Adventure <br className="block md:hidden"></br>Awaits in
+          <br></br>
           {/* <span className="block text-blue-600">Pristine Waters</span> */}
           <SplitText
           text="Pristine Waters"
-          className="block text-blue-600 tracking-tight"
+          className="hidden md:block text-blue-600 tracking-tight"
+          delay={100}
+          duration={3}
+          ease="elastic.out(1,0.3)"
+          splitType="chars"
+          from={{ opacity: 0, y: 40 }}
+          to={{ opacity: 1, y: 0 }}
+          threshold={0.1}
+          rootMargin="-100px"
+          textAlign="center"
+          onLetterAnimationComplete={handleAnimationComplete}
+        />
+        <SplitText
+          text="Pristine"
+          className="block text-blue-600 tracking-tight md:hidden"
+          delay={100}
+          duration={3}
+          ease="elastic.out(1,0.3)"
+          splitType="chars"
+          from={{ opacity: 0, y: 40 }}
+          to={{ opacity: 1, y: 0 }}
+          threshold={0.1}
+          rootMargin="-100px"
+          textAlign="center"
+          onLetterAnimationComplete={handleAnimationComplete}
+        />
+        <br className="block md:hidden"></br>
+        <SplitText
+          text="Waters"
+          className="block text-blue-600 tracking-tight md:hidden"
           delay={100}
           duration={3}
           ease="elastic.out(1,0.3)"

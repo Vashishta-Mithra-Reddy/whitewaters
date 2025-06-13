@@ -70,12 +70,12 @@ const AdventureModal = () => {
           />
           
           {/* Modal Content */}
-          <div className="relative bg-background rounded-2xl shadow-2xl max-w-4xl w-full mx-4 max-h-[95vh] overflow-hidden animate-in fade-in-0 zoom-in-95 duration-300 px-2 py-2">
+          <div className="relative bg-background rounded-2xl shadow-2xl max-w-4xl w-full mx-4 max-h-[90vh] overflow-hidden animate-in fade-in-0 zoom-in-95 duration-300 px-2 py-2">
             {/* Header */}
             <div className="flex items-center justify-between p-6 ">
               <div>
-                <h2 className="text-2xl font-bold text-foreground text-start">Choose Your Adventure</h2>
-                <p className="text-foreground/50 mt-1">Discover your perfect outdoor experience</p>
+                <h2 className="text-xl md:text-2xl font-bold text-foreground text-start">Choose Your Adventure</h2>
+                <p className="hidden md:flex text-foreground/50 mt-1">Discover your perfect outdoor experience</p>
               </div>
               <button
                 onClick={closeModal}
@@ -88,7 +88,7 @@ const AdventureModal = () => {
             {/* Content */}
             <div className="p-6">
               {/* Adventure Cards Grid */}
-              <div className="grid grid-cols-3 gap-4 mb-6">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
                 {adventures.map((adventure) => {
                   const Icon = adventure.icon;
                   return (
@@ -100,7 +100,7 @@ const AdventureModal = () => {
                         closeModal();
                       }}
                     >
-                      <div className="flex items-center md:items-start justify-center md:justify-between mb-4 mt-4 md:mt-0">
+                      <div className="flex items-center md:items-start justify-center md:justify-between mb-2 mt-2 md:mt-0">
                         <div className="p-2 bg-foreground/20 backdrop-blur-sm rounded-lg">
                           <Icon className="h-6 w-6 text-foreground" />
                         </div>
@@ -131,7 +131,7 @@ const AdventureModal = () => {
                     </div>
                     <div>
                       <h3 className="text-start font-semibold text-foreground">All Services</h3>
-                      <p className="text-sm text-foreground/50">Quick booking for all adventures</p>
+                      <p className="hidden md:flex text-sm text-foreground/50">Quick booking for all adventures</p>
                     </div>
                   </div>
                   <ArrowRight className="h-5 w-5 text-foreground/50 group-hover:text-foreground group-hover:translate-x-1 transition-all duration-200" />

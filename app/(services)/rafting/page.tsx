@@ -32,11 +32,11 @@ export default async function RaftingPage() {
                     <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
                         Experience the Magic of <span className="text-blue-600">River Rafting</span> in the Indian Himalayas
                     </h1>
-                    <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
+                    <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed px-6 md:px-0">
                         From the silent calm of gently flowing waters to the thunderous roar of rapids—discover why a moonlit night 
                         on a virgin river beach after an action-packed day is pure magic.
                     </p>
-                    <div className="flex items-center justify-center gap-8 text-sm text-gray-500">
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-sm text-gray-500">
                         <div className="flex items-center gap-2">
                             <Mountain className="w-4 h-4" />
                             Class II-V Rapids
