@@ -27,7 +27,10 @@ export default function Home() {
                     <div className="hidden md:flex absolute top-80 right-60 text-3xl animate-pulse"><MountainSnow className="w-12 h-12" /></div>
         </div> */}
         <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-0 leading-tight tracking-tight">
-          Adventure <br className="block md:hidden"></br>Awaits in
+          <span className="bg-gradient-to-b from-muted-foreground/80 to-foreground/80 bg-clip-text text-transparent">
+            Adventure <br className="block md:hidden" />
+            Awaits in
+          </span>
           <br></br>
           {/* <span className="block text-blue-600">Pristine Waters</span> */}
           <SplitText
