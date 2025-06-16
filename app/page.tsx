@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 // import { ArrowRight} from "lucide-react";
 import SplitText from "@/components/SplitText";
 import AdventureModal from "@/components/AdventureModal";
+import Herox from "@/components/herox";
 
 const handleAnimationComplete = () => {
   console.log('Animation completed');
@@ -153,6 +154,8 @@ export default function Home() {
     </div>
         </div>
       </div>
+      
+      <Herox/>
     </main>
   );
 }
