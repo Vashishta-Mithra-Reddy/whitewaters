@@ -14,7 +14,7 @@ export default async function RaftingPage() {
     return (
         <div className="min-h-screen max-w-7xl">
             {/* Hero Section */}
-            <section className="relative pb-20 pt-8 px-4 text-center">
+            <section className="relative pb-20 pt-8 px-4 text-center animate-in fade-in-20 duration-1000">
                 {/* Animated Background Elements */}
                 <div className="absolute inset-0 opacity-25">
                     <div className="absolute top-32 left-10 text-6xl animate-pulse">🏞️</div>
@@ -32,20 +32,20 @@ export default async function RaftingPage() {
                     <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
                         Experience the Magic of <span className="text-blue-600">River Rafting</span> in the Indian Himalayas
                     </h1>
-                    <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed px-6 md:px-0">
+                    <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed px-6 md:px-0 slide-in-from-top-4 animate-in duration-1000">
                         From the silent calm of gently flowing waters to the thunderous roar of rapids—discover why a moonlit night 
                         on a virgin river beach after an action-packed day is pure magic.
                     </p>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-sm text-gray-500">
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-center gap-2 slide-in-from-top-4 animate-in duration-1000">
                             <Mountain className="w-4 h-4" />
                             Class II-V Rapids
                         </div>
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-center gap-2 slide-in-from-top-8 animate-in duration-1000">
                             <Calendar className="w-4 h-4" />
                             Single & Multi-Day
                         </div>
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-center gap-2 slide-in-from-top-12 animate-in duration-1000">
                             <Users className="w-4 h-4" />
                             Group Adventures
                         </div>

@@ -14,7 +14,7 @@ export default async function KayakingPage() {
     return (
         <div className="min-h-screen w-full overflow-x-hidden">
             {/* Hero Section */}
-            <section className="relative pb-20 pt-8 px-4 text-center">
+            <section className="relative pb-20 pt-8 px-4 text-center animate-in fade-in duration-1000">
                 {/* Animated Background Elements */}
                 <div className="absolute inset-0 opacity-25 overflow-hidden">
                     <div className="absolute top-32 left-4 sm:left-10 text-4xl sm:text-6xl animate-pulse">🏞️</div>
@@ -34,20 +34,20 @@ export default async function KayakingPage() {
                     <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
                         Master the Art of <span className="text-blue-600">Kayaking</span> in the Indian Himalayas
                     </h1>
-                    <p className="text-lg md:text-xl px-6 md:px-0 text-muted-foreground mb-8 leading-relaxed">
+                    <p className="text-lg md:text-xl px-6 md:px-0 text-muted-foreground mb-8 leading-relaxed slide-in-from-top-4 animate-in duration-1000">
                         Discover why we chose this perfect river junction where endless glacial waters flow from peaks to plains. 
                         After 20+ years of first descents and Himalayan adventures, we have found the ultimate home for whitewater enthusiasts.
                     </p>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-sm text-gray-500">
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-center gap-2 slide-in-from-top-8 animate-in duration-1000">
                             <MapPin className="w-4 h-4 flex-shrink-0" />
                             <span className="whitespace-nowrap">Alaknanda River Banks</span>
                         </div>
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-center gap-2 slide-in-from-top-12 animate-in duration-1000">
                             <Mountain className="w-4 h-4 flex-shrink-0" />
                             <span className="whitespace-nowrap">Ganges Catchment</span>
                         </div>
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-center gap-2 slide-in-from-top-16 animate-in duration-1000">
                             <Trophy className="w-4 h-4 flex-shrink-0" />
                             <span className="whitespace-nowrap">Expert Instruction</span>
                         </div>

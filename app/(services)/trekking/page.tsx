@@ -14,7 +14,7 @@ export default async function TrekkingPage() {
     return (
         <div className="min-h-screen max-w-7xl">
             {/* Hero Section */}
-            <section className="relative pb-20 pt-8 px-4 text-center">
+            <section className="relative pb-20 pt-8 px-4 text-center animate-in fade-in-20 duration-1000">
                 {/* Animated Background Elements */}
                 <div className="absolute inset-0 opacity-25">
                     <div className="absolute top-32 left-10 text-6xl animate-pulse hidden md:block">🏞️</div>
@@ -32,20 +32,20 @@ export default async function TrekkingPage() {
                     <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
                         Journey Through the <br></br><span className="text-green-600">Majestic Himalayas</span><br></br> on Foot
                     </h1>
-                    <p className="text-lg md:text-xl px-6 md:px-0 text-muted-foreground mb-8 leading-relaxed">
+                    <p className="text-lg md:text-xl px-6 md:px-0 text-muted-foreground mb-8 leading-relaxed slide-in-from-top-4 animate-in duration-1000">
                         From gentle valley walks to challenging high-altitude adventures—experience the raw beauty 
                         of the Indian Himalayas with expert guides who know every trail, every peak, and every story.
                     </p>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-sm text-gray-500">
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-center gap-2 slide-in-from-top-4 animate-in duration-1000">
                             <Mountain className="w-4 h-4" />
                             2,000m - 5,000m+
                         </div>
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-center gap-2 slide-in-from-top-8 animate-in duration-1000">
                             <Calendar className="w-4 h-4" />
                             1-15 Day Treks
                         </div>
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-center gap-2 slide-in-from-top-12 animate-in duration-1000">
                             <Users className="w-4 h-4" />
                             All Skill Levels
                         </div>

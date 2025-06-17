@@ -15,7 +15,7 @@ export default async function PilgrimagePage() {
     return (
         <div className="min-h-screen max-w-7xl mx-auto">
             {/* Hero Section - Spiritual Design */}
-            <section className="relative pb-16 pt-8 px-4 overflow-hidden">
+            <section className="relative pb-16 pt-8 px-4 overflow-hidden animate-in fade-in-20 duration-1000">
                 {/* Animated Background Elements */}
                 <div className="absolute inset-0 opacity-25">
                     <div className="absolute top-10 left-10 text-6xl animate-pulse">🕉️</div>
@@ -41,7 +41,7 @@ export default async function PilgrimagePage() {
                             Where Faith Meets 
                             <span className="block text-transparent bg-gradient-to-r from-[#F4C430] to-[#F4C430] bg-clip-text mt-2">The Mountains</span>
                         </h1>
-                        <p className="text-lg md:text-xl px-6 md:px-0 text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed">
+                        <p className="text-lg md:text-xl px-6 md:px-0 text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed slide-in-from-top-4 animate-in duration-1000">
                             Journey to ancient temples, sacred caves, and holy shrines nestled in the lap of the Himalayas. 
                             These are not just trips—they are transformative experiences that connect you with centuries 
                             of devotion, peace, and divine energy.
@@ -52,12 +52,12 @@ export default async function PilgrimagePage() {
                     {/* Sacred Statistics */}
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto mb-8 px-6 md:px-0">
                     {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto mb-8"> */}
-                        <div className="bg-gradient-to-br from-orange-50 to-red-50 p-6 rounded-2xl text-center border border-orange-100 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                        <div className="bg-gradient-to-br from-orange-50 to-red-50 p-6 rounded-2xl text-center border border-orange-100 hover:shadow-lg transition-all transform hover:-translate-y-1 slide-in-from-top-8 animate-in duration-1000">
                             <div className="text-2xl mb-2">🏔️</div>
                             <div className="text-lg font-bold text-orange-700">12+</div>
                             <div className="text-xs text-orange-600">Sacred Sites</div>
                         </div>
-                        <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-2xl text-center border border-blue-100 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                        <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-2xl text-center border border-blue-100 hover:shadow-lg transition-all transform hover:-translate-y-1 slide-in-from-top-16 animate-in duration-1000">
                             <div className="text-2xl mb-2">🛕</div>
                             <div className="text-lg font-bold text-blue-700">1000+</div>
                             <div className="text-xs text-blue-600">Years History</div>
@@ -67,7 +67,7 @@ export default async function PilgrimagePage() {
                             <div className="text-lg font-bold text-purple-700">Daily</div>
                             <div className="text-xs text-purple-600">Prayers & Rituals</div>
                         </div> */}
-                        <div className="bg-gradient-to-br from-green-50 to-teal-50 p-6 rounded-2xl text-center border border-green-100 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                        <div className="bg-gradient-to-br from-green-50 to-teal-50 p-6 rounded-2xl text-center border border-green-100 hover:shadow-lg transition-all transform hover:-translate-y-1 slide-in-from-top-24 animate-in duration-1000">
                             <div className="text-2xl mb-2">✨</div>
                             <div className="text-lg font-bold text-green-700">∞</div>
                             <div className="text-xs text-green-600">Blessings</div>

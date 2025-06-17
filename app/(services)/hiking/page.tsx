@@ -14,7 +14,7 @@ export default async function HikingPage() {
     return (
         <div className="min-h-screen max-w-7xl">
             {/* Hero Section - Creative Approach */}
-            <section className="relative pb-16 pt-8 px-4">
+            <section className="relative pb-16 pt-8 px-4 animate-in fade-in duration-1000">
                 {/* Animated Background Elements */}
                 <div className="absolute inset-0 opacity-25">
                     <div className="absolute top-10 left-10 text-6xl animate-pulse opacity-10">🏔️</div>
@@ -34,12 +34,12 @@ export default async function HikingPage() {
                     </div>
 
                     {/* Main Hero Content */}
-                    <div className="text-center mb-12">
+                    <div className="text-center mb-12 ">
                         <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
                             Discover the Joy of 
                             <span className="block text-green-600 mt-2">Simple Walking</span>
                         </h1>
-                        <p className="text-lg md:text-xl px-6 md:px-0 text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+                        <p className="text-lg md:text-xl px-6 md:px-0 text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed slide-in-from-top-4 animate-in duration-1000">
                             Sometimes the best adventures happen one step at a time. Join us for gentle hikes through 
                             pine forests, meadows full of wildflowers, and hidden waterfalls that refresh both body and soul.
                         </p>
@@ -47,22 +47,22 @@ export default async function HikingPage() {
 
                     {/* Quick Stats Cards */}
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-                        <div className="bg-green-50 p-4 rounded-xl text-center">
+                        <div className="bg-green-50 p-4 rounded-xl text-center slide-in-from-top-8 animate-in duration-1000">
                             <Clock className="w-6 h-6 text-green-600 mx-auto mb-2" />
                             <div className="text-sm font-semibold text-green-700">2-6 Hours</div>
                             <div className="text-xs text-green-600">Perfect Duration</div>
                         </div>
-                        <div className="bg-blue-50 p-4 rounded-xl text-center">
+                        <div className="bg-blue-50 p-4 rounded-xl text-center slide-in-from-top-16 animate-in duration-1000">
                             <Heart className="w-6 h-6 text-blue-600 mx-auto mb-2" />
                             <div className="text-sm font-semibold text-blue-700">All Ages</div>
                             <div className="text-xs text-blue-600">Family Friendly</div>
                         </div>
-                        <div className="bg-purple-50 p-4 rounded-xl text-center">
+                        <div className="bg-purple-50 p-4 rounded-xl text-center slide-in-from-top-24 animate-in duration-1000">
                             <Camera className="w-6 h-6 text-purple-600 mx-auto mb-2" />
                             <div className="text-sm font-semibold text-purple-700">Photo Spots</div>
                             <div className="text-xs text-purple-600">Instagram Ready</div>
                         </div>
-                        <div className="bg-orange-50 p-4 rounded-xl text-center">
+                        <div className="bg-orange-50 p-4 rounded-xl text-center slide-in-from-top-32 animate-in duration-1000">
                             <TreePine className="w-6 h-6 text-orange-600 mx-auto mb-2" />
                             <div className="text-sm font-semibold text-orange-700">Nature Immersion</div>
                             <div className="text-xs text-orange-600">Pure Bliss</div>

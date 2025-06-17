@@ -10,7 +10,7 @@ return (
             <div className="flex gap-5 items-center font-semibold">
               {/* <Link href={"/"} className="text-xl font-bold">White Waters</Link> */}
               <Link href={"/"} className="text-xl font-bold px-0 md:px-10">
-              <Image src="/white_waters_v5.png" width={60} height={60} alt="White Waters Logo" className="rounded-full"/>
+              <Image src="/white_waters_v5.png" width={60} height={60} priority alt="White Waters Logo" className="rounded-full"/>
               </Link>
             </div>
             <Navigation />
