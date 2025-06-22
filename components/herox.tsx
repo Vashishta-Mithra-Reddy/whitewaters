@@ -40,16 +40,13 @@ export default function Herox() {
     : "/product_desktop_light.png";
 
   return (
-    <section className="flex-row md:flex justify-center items-center my-40">
+    <section className="flex-row md:flex justify-center items-center my-20 md:my-32">
       <div className="px-20 py-20 rounded-2xl font-satoshi">
-        {/* <h3 className="pb-4 text-3xl text-center md:text-start text-foreground/80">
-          What is Ishta?
-        </h3> */}
-        <p className="text-xl text-center md:text-end text-foreground/60 font-bold">
+        <p className="text-4xl text-center md:text-end text-foreground/60 font-bold">
           All your <br />
           Adventures<br />
           {/* At <br /> */}
-          <span className="underline text-foreground/90">at one place.</span>
+          <span>at one place.</span>
         </p>
       </div>
       <Link href="/services">

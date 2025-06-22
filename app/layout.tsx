@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import { ThemeProvider } from "next-themes";
+import localfont from "next/font/local";
+
 import "./globals.css";
 import Footer from "@/components/shared/footer";
 import Header from "@/components/shared/header";
@@ -14,7 +16,7 @@ const defaultUrl = process.env.VERCEL_URL
 export const metadata: Metadata = {
   metadataBase: new URL(defaultUrl),
   title: "White Waters",
-  description: "Your one stop spot for all your adventures",
+  description: "Your One Stop Spot For All Your Adventures",
 };
 
 const geistSans = Geist({
@@ -23,6 +25,14 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
+const satoshi = localfont({
+  variable: "--font-satoshi",
+  weight: "900",
+  src: "./fonts/Satoshi-Variable.woff2",
+  display: "swap"
+});
+
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -30,7 +40,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.className} antialiased flex flex-col items-center`}>
+      <body className={`${geistSans.className} ${satoshi.variable} antialiased flex flex-col items-center`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
