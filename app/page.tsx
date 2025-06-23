@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import SplitText from "@/components/SplitText";
 import AdventureModal from "@/components/AdventureModal";
 import Herox from "@/components/herox";
-import { InfiniteSlider } from "@/components/motion-primitives/infinite-slider";
+// import { InfiniteSlider } from "@/components/motion-primitives/infinite-slider";
 import { Mail, Phone } from "lucide-react";
 import GalleryThingy from "@/components/GalleryThingy";
 
