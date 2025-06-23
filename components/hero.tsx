@@ -1,6 +1,6 @@
 import { Button } from "./ui/button";
 import Link from "next/link";
-import { ArrowRight, Phone, Mail, MountainSnow } from "lucide-react";
+import { MountainSnow } from "lucide-react";
 import AdventureModal from "./AdventureModal";
 import SplitText from "./SplitText";
 

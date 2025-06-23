@@ -1,13 +1,7 @@
 "use client";
 
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import SplitText from "@/components/SplitText";
-import AdventureModal from "@/components/AdventureModal";
 import Herox from "@/components/herox";
-import { Mail, Phone } from "lucide-react";
 import GalleryThingy from "@/components/GalleryThingy";
-import { BackgroundGradientAnimation } from "@/components/background-gradient";
 import ContactInfo from "@/components/ContactInfo";
 import FeaturesGrid from "@/components/FeaturesGrid";
 import Hero from "@/components/hero";
