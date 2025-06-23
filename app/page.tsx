@@ -6,7 +6,9 @@ import { Button } from "@/components/ui/button";
 import SplitText from "@/components/SplitText";
 import AdventureModal from "@/components/AdventureModal";
 import Herox from "@/components/herox";
+import { InfiniteSlider } from "@/components/motion-primitives/infinite-slider";
 import { Mail, Phone } from "lucide-react";
+import GalleryThingy from "@/components/GalleryThingy";
 
 const handleAnimationComplete = () => {
   console.log('Animation completed');
@@ -14,7 +16,7 @@ const handleAnimationComplete = () => {
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col items-center">
+    <main className="min-h-screen w-full flex flex-col items-center">
       <div className="flex-1 w-full flex flex-col gap-20 items-center">
         <div className="flex-1 flex flex-col gap-20 max-w-5xl p-5">
         <div className="flex flex-col gap-16 items-center">
@@ -135,14 +137,20 @@ export default function Home() {
           Simple booking process – no account required for one-time adventures
         </p>
       </div>
+      </div>
 
-        </div>
+      {/* <GalleryThingy/> */}
       
         </div>
         </div>
       </div>
       
       <Herox/>
+      <div className="px-12 w-full max-w-7xl hidden md:block">
+      <GalleryThingy/>
+      </div>
+
+      
 
       {/* Contact Info */}
       <div id="contact" className="w-full max-w-4xl bg-muted/50 rounded-lg p-8 my-20">
