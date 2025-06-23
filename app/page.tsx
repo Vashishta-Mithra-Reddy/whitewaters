@@ -12,6 +12,7 @@ export default function Home() {
       
       {/* Animated background gradient applied here */}
       <div className="flex-1 w-full flex flex-col gap-20 items-center animate-gradient">
+        
         <div className="flex-1 flex flex-col gap-20 max-w-5xl p-5">
           <div className="flex flex-col gap-16 items-center">
             <Hero />
