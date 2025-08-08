@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { ArrowRight, X, Waves, Ship, Mountain, Trees, Grid3X3 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { Button } from './ui/button';
+import ReactDOM from 'react-dom';
 
 const AdventureModal = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,23 +46,16 @@ const AdventureModal = () => {
 
   return (
     <div>
-      {/* Original Button */}
-      <Button 
-        size="lg" 
-        onClick={openModal}
-      >
+      <Button size="lg" onClick={openModal}>
         Explore Adventures <ArrowRight className="ml-2 h-4 w-4" />
       </Button>
-
-      {/* Modal Overlay */}
-      {isOpen && (
+      {isOpen && typeof window !== 'undefined' && ReactDOM.createPortal(
         <div className="fixed inset-0 z-50 flex items-center justify-center">
           {/* Backdrop */}
           <div 
             className="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity duration-300"
             onClick={closeModal}
           />
-          
           {/* Modal Content */}
           <div className="relative bg-background rounded-2xl shadow-2xl max-w-4xl w-full mx-4 max-h-[90vh] overflow-hidden animate-in fade-in-0 zoom-in-95 duration-300 px-2 py-2">
             {/* Header */}
@@ -132,7 +126,8 @@ const AdventureModal = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </div>
   );
