@@ -133,8 +133,8 @@ return(
                     </div>
                     
                     <p className="text-center md:text-left mb-2 mt-2 md:mb-0">© {new Date().getFullYear()} White Waters. All rights reserved.</p>
-                    <p className="flex items-center justify-center md:justify-start mb-2 mt-2 md:mb-0 text-sm text-muted-foreground">
-                      Built with ❤️ in the Himalayas.
+                    <p className="flex items-center justify-center md:justify-start mb-2 mt-2 md:mb-0 text-sm text-muted-foreground animate-pulse">
+                      Built with <span className="animate-pulse text-lg p-1">❤️</span> in the Himalayas.
                     </p>
                   
                   </div>
