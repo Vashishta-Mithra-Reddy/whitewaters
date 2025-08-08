@@ -31,13 +31,13 @@ return(
                       <p className="text-base text-muted-foreground text-balance">Experience the thrill of adventure in the Indian Himalayas with our expert-guided water and mountain expeditions.</p>
                       
                       <div className="mt-6 flex items-center justify-center sm:justify-start gap-5">
-                        <a href="https://instagram.com" className="text-muted-foreground hover:text-blue-700 transition-colors p-2 hover:bg-blue-700/10 rounded-full" aria-label="Instagram">
+                        <a href="https://instagram.com" className="text-muted-foreground hover:text-blue-500 transition-colors p-2 hover:bg-blue-500/10 rounded-full" aria-label="Instagram">
                           <Instagram className="h-6 w-6" />
                         </a>
-                        <a href="https://facebook.com" className="text-muted-foreground hover:text-blue-700 transition-colors p-2 hover:bg-blue-700/10 rounded-full" aria-label="Facebook">
+                        <a href="https://facebook.com" className="text-muted-foreground hover:text-blue-500 transition-colors p-2 hover:bg-blue-500/10 rounded-full" aria-label="Facebook">
                           <Facebook className="h-6 w-6" />
                         </a>
-                        <a href="https://twitter.com" className="text-muted-foreground hover:text-blue-700 transition-colors p-2 hover:bg-blue-700/10 rounded-full" aria-label="Twitter">
+                        <a href="https://twitter.com" className="text-muted-foreground hover:text-blue-500 transition-colors p-2 hover:bg-blue-500/10 rounded-full" aria-label="Twitter">
                           <Twitter className="h-6 w-6" />
                         </a>
                       </div>
@@ -45,50 +45,50 @@ return(
                     
                     <div className="text-center sm:text-left pt-4">
                       <h3 className="font-semibold mb-4 text-xl flex items-center gap-2 justify-center sm:justify-start">
-                        <Compass className="h-6 w-6 text-blue-700" />
+                        <Compass className="h-6 w-6 text-blue-500  mr-1" />
                         Our Adventures
                       </h3>
                       <ul className="space-y-3 text-base">
                         <li>
-                          <Link href="/rafting" className="hover:text-blue-700 transition-all flex items-center gap-2 justify-center sm:justify-start p-2 hover:translate-x-1 duration-200">
-                            <ShipIcon className="h-5 w-5 text-blue-700/70" />
+                          <Link href="/rafting" className="hover:text-blue-500 transition-all flex items-center gap-2 justify-center sm:justify-start p-2 hover:translate-x-1 duration-200">
+                            <ShipIcon className="h-5 w-5 text-blue-500  mr-1" />
                             Rafting Trips
                           </Link>
                         </li>
                         {/* <li>
-                          <Link href="/services?category=rafting&type=expedition" className="hover:text-blue-700 transition-all flex items-center gap-2 justify-center sm:justify-start p-1 hover:translate-x-1 duration-200">
-                            <ShipIcon className="h-5 w-5 text-blue-700/70" />
+                          <Link href="/services?category=rafting&type=expedition" className="hover:text-blue-500 transition-all flex items-center gap-2 justify-center sm:justify-start p-1 hover:translate-x-1 duration-200">
+                            <ShipIcon className="h-5 w-5 text-blue-500  mr-1" />
                             Rafting Expeditions
                           </Link>
                         </li> */}
                         <li>
-                          <Link href="/kayaking" className="hover:text-blue-700 transition-all flex items-center gap-2 justify-center sm:justify-start p-2 hover:translate-x-1 duration-200">
-                            <Waves className="h-5 w-5 text-blue-700/70" />
+                          <Link href="/kayaking" className="hover:text-blue-500 transition-all flex items-center gap-2 justify-center sm:justify-start p-2 hover:translate-x-1 duration-200">
+                            <Waves className="h-5 w-5 text-blue-500  mr-1" />
                             Kayaking Expeditions
                           </Link>
                         </li>
                         {/* <li>
-                          <Link href="/services?category=kayaking&type=course" className="hover:text-blue-700 transition-all flex items-center gap-2 justify-center sm:justify-start p-1 hover:translate-x-1 duration-200">
-                            <BookOpen className="h-5 w-5 text-blue-700/70" />
+                          <Link href="/services?category=kayaking&type=course" className="hover:text-blue-500 transition-all flex items-center gap-2 justify-center sm:justify-start p-1 hover:translate-x-1 duration-200">
+                            <BookOpen className="h-5 w-5 text-blue-500  mr-1" />
                             Kayak Courses
                           </Link>
                         </li>
                         <li>
-                          <Link href="/services?category=kayaking&type=rental" className="hover:text-blue-700 transition-all flex items-center gap-2 justify-center sm:justify-start p-1 hover:translate-x-1 duration-200">
-                            <Backpack className="h-5 w-5 text-blue-700/70" />
+                          <Link href="/services?category=kayaking&type=rental" className="hover:text-blue-500 transition-all flex items-center gap-2 justify-center sm:justify-start p-1 hover:translate-x-1 duration-200">
+                            <Backpack className="h-5 w-5 text-blue-500  mr-1" />
                             Kayak Rental
                           </Link>
                         </li> */}
                         <li>
-                          <Link href="/hiking" className="hover:text-blue-700 transition-all flex items-center gap-2 justify-center sm:justify-start p-2 hover:translate-x-1 duration-200">
-                            <Tent className="h-5 w-5 text-blue-700/70" />
+                          <Link href="/hiking" className="hover:text-blue-500 transition-all flex items-center gap-2 justify-center sm:justify-start p-2 hover:translate-x-1 duration-200">
+                            <Tent className="h-5 w-5 text-blue-500 mr-1" />
                             Hiking
                           </Link>
                         </li>
 
                         <li>
-                          <Link href="/trekking" className="hover:text-blue-700 transition-all flex items-center gap-2 justify-center sm:justify-start p-2 hover:translate-x-1 duration-200">
-                            <Mountain className="h-5 w-5 text-blue-700/70" />
+                          <Link href="/trekking" className="hover:text-blue-500 transition-all flex items-center gap-2 justify-center sm:justify-start p-2 hover:translate-x-1 duration-200">
+                            <Mountain className="h-5 w-5 text-blue-500" />
                             Trekking
                           </Link>
                         </li>
@@ -97,7 +97,7 @@ return(
                     
                     <div className="text-center sm:text-left pt-4">
                       {/* <h3 className="font-semibold mb-4 text-xl flex items-center gap-2 justify-center sm:justify-start">
-                        <Mountain className="h-6 w-6 text-blue-700" />
+                        <Mountain className="h-6 w-6 text-blue-500" />
                         Mountain Adventures
                       </h3>
                       <ul className="space-y-3 text-base mb-6">
@@ -105,22 +105,22 @@ return(
                       </ul> */}
                       
                       <h3 className="font-semibold mb-4 text-xl flex items-center gap-2 justify-center sm:justify-start">
-                        <MessageSquare className="h-6 w-6 text-blue-700" />
+                        <MessageSquare className="h-6 w-6 text-blue-500" />
                         Contact Us
                       </h3>
                       <div className="space-y-4 text-base">
-                        <a href="tel:+918171340036" className="flex items-center gap-3 justify-center sm:justify-start p-2 hover:text-blue-700 transition-colors hover:bg-blue-700/5 rounded-md">
-                          <Phone className="h-5 w-5 text-blue-700 flex-shrink-0" />
+                        <a href="tel:+918171340036" className="flex items-center gap-3 justify-center sm:justify-start p-2 hover:text-blue-500 transition-colors hover:bg-blue-500/5 rounded-md">
+                          <Phone className="h-5 w-5 text-blue-500 flex-shrink-0" />
                           <span>+918171340036</span>
                         </a>
                         
-                        <a href="mailto:info@whitewaters.com" className="flex items-center gap-3 justify-center sm:justify-start p-2 hover:text-blue-700 transition-colors hover:bg-blue-700/5 rounded-md">
-                          <Mail className="h-5 w-5 text-blue-700 flex-shrink-0" />
+                        <a href="mailto:info@whitewaters.com" className="flex items-center gap-3 justify-center sm:justify-start p-2 hover:text-blue-500 transition-colors hover:bg-blue-500/5 rounded-md">
+                          <Mail className="h-5 w-5 text-blue-500 flex-shrink-0" />
                           <span>shivanandi.river.lodge@gmail.com</span>
                         </a>
                         
-                        <div className="flex items-start gap-3 justify-center sm:justify-start p-2 hover:bg-blue-700/5 rounded-md group">
-                          <MapPin className="h-5 w-5 text-blue-700 flex-shrink-0 mt-0.5 group-hover:animate-bounce transition-all duration-300" />
+                        <div className="flex items-start gap-3 justify-center sm:justify-start p-2 hover:bg-blue-500/5 rounded-md group">
+                          <MapPin className="h-5 w-5 text-blue-500 flex-shrink-0 mt-0.5 group-hover:animate-bounce transition-all duration-300" />
                           <p className="text-muted-foreground group-hover:text-foreground transition-colors text-balance">Shivanandi River Lodge, Bankhil, Uttarakhand 246171</p>
                         </div>
                       </div>
