@@ -15,7 +15,7 @@ return (
             </div>
             <Navigation />
             
-              <Link href={"/contact"} className={`text-white bg-blue-500 font-bold tracking-wide px-5 py-2.5 rounded-lg hover:bg-blue-500/80`}>
+              <Link href={"/contact"} className={`text-white bg-blue-500 font-semibold tracking-wide px-5 py-2.5 rounded-lg hover:bg-blue-500/80`}>
                 Connect with us!
               </Link> 
             {/* <AuthButton /> */}
