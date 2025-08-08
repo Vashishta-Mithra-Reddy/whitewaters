@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import { ArrowRight, X, Waves, Ship, Mountain, Trees, MountainSnow, Grid3X3 } from 'lucide-react';
+import { ArrowRight, X, Waves, Ship, Mountain, Trees, Grid3X3 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { Button } from './ui/button';
 
@@ -37,13 +37,6 @@ const AdventureModal = () => {
       icon: Mountain,
       href: "/trekking",
       gradient: "from-amber-500 to-orange-400"
-    },
-    {
-      title: "Pilgrimage",
-      description: "Spiritual journey experiences",
-      icon: MountainSnow,
-      href: "/pilgrimage",
-      gradient: "from-purple-500 to-pink-400"
     }
   ];
 
@@ -88,7 +81,7 @@ const AdventureModal = () => {
             {/* Content */}
             <div className="p-6">
               {/* Adventure Cards Grid */}
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                 {adventures.map((adventure) => {
                   const Icon = adventure.icon;
                   return (
@@ -100,11 +93,11 @@ const AdventureModal = () => {
                         closeModal();
                       }}
                     >
-                      <div className="flex items-center md:items-start justify-center md:justify-between mb-2 mt-2 md:mt-0">
+                      <div className="flex items-center justify-center mb-2 mt-2 md:mt-0">
                         <div className="p-2 bg-foreground/20 backdrop-blur-sm rounded-lg">
                           <Icon className="h-6 w-6 text-foreground" />
                         </div>
-                        <ArrowRight className="h-4 w-4 hidden md:flex text-foreground/70 group-hover:text-foreground group-hover:translate-x-1 transition-all duration-200" />
+                        {/* <ArrowRight className="h-4 w-4 hidden md:flex text-foreground/70 group-hover:text-foreground group-hover:translate-x-1 transition-all duration-200" /> */}
                       </div>
                       <h3 className="text-base md:text-xl font-semibold text-foreground mb-2">{adventure.title}</h3>
                       <p className="text-foreground/80 text-sm hidden md:flex">{adventure.description}</p>

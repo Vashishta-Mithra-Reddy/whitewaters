@@ -10,7 +10,7 @@ import Herox from "@/components/herox";
 // import { Mail, Phone } from "lucide-react";
 import GalleryThingy from "@/components/GalleryThingy";
 // import { BackgroundGradientAnimation } from "@/components/background-gradient";
-import ContactInfo from "@/components/ContactInfo";
+// import ContactInfo from "@/components/ContactInfo";
 import FeaturesGrid from "@/components/FeaturesGrid";
 
 const handleAnimationComplete = () => {
@@ -110,7 +110,7 @@ export default function Home() {
       <GalleryThingy/>
       </div>
 
-      <ContactInfo/>
+      {/* <ContactInfo/> */}
 
     </main>
   );

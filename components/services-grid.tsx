@@ -11,7 +11,7 @@ export function ServicesGrid() {
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
-  const categories = ['all', 'kayaking', 'rafting','hiking','trekking','pilgrimage'];
+  const categories = ['all', 'kayaking', 'rafting','hiking','trekking'];
 
   useEffect(() => {
     const fetchServices = async () => {
