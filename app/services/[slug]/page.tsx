@@ -15,7 +15,7 @@ export default async function ServiceDetailPage({
 
   if (!service) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center wrapperx">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-gray-900 mb-4">Service not found</h1>
           <p className="text-gray-600">The service you are looking for does not exist or has been removed.</p>
@@ -43,7 +43,7 @@ export default async function ServiceDetailPage({
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen wrapperx">
       <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div className="bg-white rounded-lg shadow-lg overflow-hidden mb-8">

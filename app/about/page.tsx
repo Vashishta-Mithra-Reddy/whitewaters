@@ -8,18 +8,18 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="container mx-auto px-4 py-12 wrapperx">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold mb-8 text-center">About White Waters</h1>
+        <h1 className="text-4xl font-bold mb-12 text-center">About White Waters</h1>
         
         <div className="prose prose-lg dark:prose-invert mx-auto">
           <div className="mb-12">
             <div className="relative w-full h-[400px] mb-8 rounded-lg overflow-hidden">
               <Image
-                src="/images/about-hero.jpg"
+                src="/whitewatersx.png"
                 alt="White Waters Adventure"
                 fill
-                className="object-cover"
+                className="object-cover brightness-90"
                 priority
               />
             </div>

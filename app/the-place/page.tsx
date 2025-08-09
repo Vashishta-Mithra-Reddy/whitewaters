@@ -8,14 +8,14 @@ export const metadata: Metadata = {
 
 export default function ThePlacePage() {
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="container mx-auto px-4 py-12 wrapperx">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold mb-8 text-center">The Place</h1>
         
         <div className="prose prose-lg dark:prose-invert mx-auto">
           <div className="relative w-full h-[500px] mb-12 rounded-lg overflow-hidden">
             <Image
-              src="/images/the-place-hero.jpg"
+              src="/whitewaters_hero.jpg"
               alt="White Waters Location"
               fill
               className="object-cover"

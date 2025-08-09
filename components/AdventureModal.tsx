@@ -81,7 +81,7 @@ const AdventureModal = () => {
                   return (
                     <div
                       key={adventure.title}
-                      className="group relative overflow-hidden rounded-xl bg-gradient-to-br hover:bg-foreground/10 p-4 md:p-6 cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl border-2 border-dashed hover:border-transparent"
+                      className="group relative overflow-hidden rounded-xl bg-gradient-to-br hover:bg-foreground/10 p-4 md:p-6 cursor-pointer transform transition-all duration-300 hover:shadow-xl border-2 border-dashed hover:border-transparent"
                       onClick={() => {
                         router.push(adventure.href);
                         closeModal();
@@ -93,8 +93,8 @@ const AdventureModal = () => {
                         </div>
                         {/* <ArrowRight className="h-4 w-4 hidden md:flex text-foreground/70 group-hover:text-foreground group-hover:translate-x-1 transition-all duration-200" /> */}
                       </div>
-                      <h3 className="text-base md:text-xl font-semibold text-foreground mb-2">{adventure.title}</h3>
-                      <p className="text-foreground/80 text-sm hidden md:flex">{adventure.description}</p>
+                      <h3 className="text-base md:text-xl font-semibold text-foreground mb-1 mt-4 text-center">{adventure.title}</h3>
+                      <p className="text-foreground/80 text-sm text-center hidden md:flex">{adventure.description}</p>
                       
                       {/* Hover Effect Overlay */}
                       <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

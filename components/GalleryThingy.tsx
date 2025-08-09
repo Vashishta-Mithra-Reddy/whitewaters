@@ -3,12 +3,12 @@ import Link from "next/link";
 
 export default function GalleryThingy() {
     return (
-        <section className="py-20 w-full overflow-hidden">
+        <section className="py-20 md:pb-40 pb-20 w-full overflow-hidden">
       <h2 className="text-3xl md:text-4xl font-bold mb-4 pt-20 text-center">Gallery</h2>
       <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-20 text-center">
            Some of the moments we have managed to capture.
       </p>
-      <InfiniteSlider speedOnHover={40} gap={28} className="pb-20 rounded-xl">
+      <InfiniteSlider speedOnHover={40} gap={28} className="rounded-xl">
         {[
           {
             src: 'https://qhjoterajxzitvienqos.supabase.co/storage/v1/object/public/photos/gallery/10.avif',
