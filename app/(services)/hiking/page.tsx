@@ -2,6 +2,10 @@ import { SpecificServiceGrid } from "@/components/specific-service-grid";
 import { getServicesByCategory } from "@/lib/supabase/services";
 import { TreePine, Footprints, Heart, Camera, Clock, MapPin, Sun, Wind } from "lucide-react";
 import { Metadata } from "next";
+import Image from "next/image";
+import mentalpeace from "@/public/mental_peace.jpg";
+import nature from "@/public/nature.jpg";
+import memorymaking from "@/public/memory_making.jpg";
 
 export const metadata: Metadata = {
     title: 'Hiking | White Waters',
@@ -110,6 +114,8 @@ export default async function HikingPage() {
                                 </div>
                             </div>
                             <div className="order-1 md:order-2 bg-gradient-to-br from-green-50 to-blue-50 p-8 rounded-2xl">
+                               <Image src={mentalpeace} alt="Mental Peace" className="w-full h-64 object-cover rounded-xl mb-4" />
+
                                 <div className="text-center">
                                     <div className="text-3xl mb-4">🧠</div>
                                     <div className="text-sm text-gray-600 font-medium">Studies show</div>
@@ -122,6 +128,8 @@ export default async function HikingPage() {
                         {/* Second Item */}
                         <div className="grid md:grid-cols-2 gap-8 items-center">
                             <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl">
+                                <Image src={nature} alt="Nature" className="w-full h-64 object-cover rounded-xl mb-4" />
+
                                 <div className="text-center">
                                     <div className="text-3xl mb-4">👥</div>
                                     <div className="text-sm text-gray-600 font-medium">Perfect for</div>
@@ -168,6 +176,8 @@ export default async function HikingPage() {
                                 </div>
                             </div>
                             <div className="order-1 md:order-2 bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl">
+                                <Image src={memorymaking} alt="Memory Making" className="w-full h-64 object-cover rounded-xl mb-4" />
+
                                 <div className="text-center">
                                     <div className="text-3xl mb-4">📸</div>
                                     <div className="text-sm text-gray-600 font-medium">Average per hike</div>

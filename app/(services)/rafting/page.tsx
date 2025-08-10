@@ -2,6 +2,8 @@ import { SpecificServiceGrid } from "@/components/specific-service-grid";
 import { getServicesByCategory } from "@/lib/supabase/services";
 import { Waves, Moon, Users, Mountain, Calendar, Star, Compass, MountainSnow } from "lucide-react";
 import { Metadata } from "next";
+import Image from "next/image";
+import rafting from "@/public/rafting.jpg";
 
 export const metadata:Metadata = {
     title: 'Rafting | White Waters',
@@ -102,6 +104,7 @@ export default async function RaftingPage() {
                         </div>
                         
                         <div className="bg-background p-8 rounded-2xl border-2 border-foreground/20 border-dashed">
+                            <Image src={rafting} alt="Rafting" className="w-full h-64 object-cover rounded-xl mb-6" />
                             <h3 className="text-xl font-semibold text-foreground mb-4">The Full Experience</h3>
                             <p className="text-foreground mb-6">We help you choose the perfect descent based on your group&apos;s experience and adventure appetite. From gentle Class II waters to heart-pounding Class V rapids, every journey is tailored to your desires.</p>
                             

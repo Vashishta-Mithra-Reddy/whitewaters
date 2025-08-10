@@ -2,6 +2,11 @@ import { SpecificServiceGrid } from "@/components/specific-service-grid";
 import { getServicesByCategory } from "@/lib/supabase/services";
 import { Mountain, Compass, Users, Star, Calendar, Sunrise, TreePine, MapPin, Footprints } from "lucide-react";
 import { Metadata } from "next";
+import Image from "next/image";
+import trekking from "@/public/trekking_main.jpg";
+import valleyofflowers from "@/public/valley_of_flowers.jpg";
+import roopkund from "@/public/roopkund_lake.jpg";
+import kerdarkantha from "@/public/kedarkantha.jpg";
 
 export const metadata: Metadata = {
     title: 'Trekking | White Waters',
@@ -102,6 +107,7 @@ export default async function TrekkingPage() {
                         </div>
                         
                         <div className="bg-background p-8 rounded-2xl border-2 border-foreground/20 border-dashed">
+                            <Image src={trekking} alt="Trekking" className="w-full h-64 object-cover rounded-xl mb-6" />
                             <h3 className="text-xl font-semibold text-foreground mb-4">Your Himalayan Adventure</h3>
                             <p className="text-foreground mb-6">We craft each trek to match your group&apos;s experience and aspirations. From gentle valley walks to challenging high-altitude expeditions, every journey is designed to push your boundaries while keeping you safe.</p>
                             
@@ -177,11 +183,12 @@ export default async function TrekkingPage() {
                                 </div>
                                 
                                 <div className="bg-pink-50 p-6 rounded-xl">
+                                    <Image src={valleyofflowers} alt="Valley Of Flowers Trek" className="w-full h-44 object-cover rounded-xl mb-4" />
+
                                     <h4 className="font-semibold text-pink-700 mb-3">Natural Wonder</h4>
                                     <ul className="space-y-2 text-sm text-pink-600">
                                         <li>• UNESCO World Heritage site</li>
                                         <li>• Rare Himalayan flora & fauna</li>
-                                        <li>• Sacred lake at Hemkund</li>
                                         <li>• Perfect for nature photography</li>
                                     </ul>
                                 </div>
@@ -223,6 +230,8 @@ export default async function TrekkingPage() {
                                 </div>
                                 
                                 <div className="bg-blue-50 p-6 rounded-xl">
+                                    <Image src={roopkund} alt="Roopkund Trek" className="w-full h-40 object-cover rounded-xl mb-4" />
+
                                     <h4 className="font-semibold text-blue-700 mb-3">Advanced Trek</h4>
                                     <p className="text-blue-600 mb-4">Duration: 8-9 days • Max Altitude: 5,029m • Difficulty: Challenging</p>
                                     <div className="text-sm text-blue-700 bg-blue-100 p-3 rounded-lg">
@@ -272,12 +281,12 @@ export default async function TrekkingPage() {
                                 </div>
                                 
                                 <div className="bg-orange-50 p-6 rounded-xl">
+                                    <Image src={kerdarkantha} alt="Kedarkantha Trek" className="w-full h-44 object-cover rounded-xl mb-4" />
                                     <h4 className="font-semibold text-orange-700 mb-3">Winter Specialist</h4>
-                                    <p className="text-orange-600 mb-4">Experience the magic of Himalayan winters with proper equipment and expert guidance.</p>
+                                    {/* <p className="text-orange-600 mb-4">Experience the magic of Himalayan winters with proper equipment and expert guidance.</p> */}
                                     <div className="space-y-2 text-sm text-orange-700">
                                         <div>❄️ Snow trekking techniques</div>
                                         <div>🏔️ Winter camping experience</div>
-                                        <div>🌅 Spectacular sunrise views</div>
                                         <div>⭐ Clear starry nights</div>
                                     </div>
                                 </div>

@@ -2,6 +2,12 @@ import { SpecificServiceGrid } from "@/components/specific-service-grid";
 import { getServicesByCategory } from "@/lib/supabase/services";
 import { Waves, Users, MapPin, Trophy, Mountain, Heart, Clock, Shield, MountainSnow } from "lucide-react";
 import { Metadata } from "next";
+import Image from "next/image";
+import alaknandha from "@/public/alaknandha_river.jpg";
+import mandakini from "@/public/mandakini_river.jpg";
+import pindar from "@/public/pindar_river.jpg";
+import learning from "@/public/learning_kayaking.jpg";
+
 
 export const metadata:Metadata = {
     title: 'Kayaking | White Waters',
@@ -107,6 +113,7 @@ export default async function KayakingPage() {
                             </div>
                             
                             <div className="bg-background p-6 sm:p-8 rounded-2xl border-2 border-foreground/20 border-dashed">
+                                <Image src={learning} alt="Alaknanda River" className="w-full h-64 object-cover rounded-xl mb-6" />
                                 <h3 className="text-xl font-semibold text-foreground mb-4">Perfect for Learning</h3>
                                 <p className="text-foreground mb-6">Learning to kayak takes time and patience. We recommend planning at least 4-5 days for a basic course—it&apos;s always better with a friend for both fun and future paddling adventures.</p>
                                 
@@ -210,6 +217,7 @@ export default async function KayakingPage() {
                                     </div>
                                 </div>
                                 <div className="bg-[#b1e3fa]/20 p-6 rounded-xl">
+                                <Image src={alaknandha} alt="Alaknanda River" className="w-full h-64 object-cover rounded-xl mb-6" />
                                     <h4 className="font-semibold text-foreground mb-3">Highlighted Section</h4>
                                     <p className="text-foreground mb-4"><strong>Shivanandi to Rudraprayag:</strong> A thrilling 13km run with numerous Class 3-4 rapids, including the spectacular Goats-Leap Gorge (Kakkar Fall) entry above Rudraprayag.</p>
                                     <div className="text-sm text-gray-500">Perfect for intermediate to advanced kayakers seeking technical challenges</div>
@@ -221,6 +229,7 @@ export default async function KayakingPage() {
                         <div className="rounded-2xl p-6 lg:p-8 border-2 border-dashed border-foreground/20">
                             <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-center">
                                 <div className="p-6 rounded-xl bg-[#b1e3fa]/20 order-2 lg:order-1">
+                                    <Image src={mandakini} alt="Alaknanda River" className="w-full h-64 object-cover rounded-xl mb-6" />
                                     <h4 className="font-semibold text-foreground mb-3">The Hidden Gem</h4>
                                     <p className="text-foreground mb-4">The secret is out! The Mandakini provides some of the finest Class V Alpine Himalayan kayaking experiences, just 10 kilometers from our lodge.</p>
                                     <div className="text-sm text-gray-500">Joins the Alaknanda at the sacred town of Rudraprayag</div>
@@ -250,6 +259,7 @@ export default async function KayakingPage() {
                         {/* Pindar River */}
                         <div className="rounded-2xl p-6 lg:p-8 border-2 border-dashed border-foreground/20">
                             <div className="text-center">
+                                <Image src={pindar} alt="Alaknanda River" className="w-full h-64 object-cover rounded-xl mb-6" />
                                 <h3 className="text-2xl font-bold text-foreground mb-4">Pindar River</h3>
                                 <p className="text-foreground mb-6 max-w-3xl mx-auto">
                                     Journey from the remote Pindari Glacier through steep canyon whitewater, emerging as a mature river with sandy beaches and relaxed Class III rapids for 60 kilometers until meeting the Alaknanda at Karnprayag.
