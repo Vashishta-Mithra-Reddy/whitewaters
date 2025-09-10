@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import localfont from "next/font/local";
+import { Analytics } from "@vercel/analytics/next";
 
 import "./globals.css";
 import Footer from "@/components/shared/footer";
@@ -50,6 +51,7 @@ export default function RootLayout({
           <Header />
 
           {children}
+          <Analytics />
           
           <BottomGradient/>
           <BottomNav/>
