@@ -14,6 +14,7 @@ return(
       <p className="pl-4 font-bold">White Waters</p>
       </div>
       </Link>
+      <a href="https://v19.tech/?utm_source=white_waters&utm_medium=referral&utm_campaign=built_by_v19" target="_blank" rel="noopener noreferrer" className="text-inherit opacity-70 underline-offset-2 hover:underline">Built by V19</a>
       <ThemeSwitcher />
       </div>
       </BackgroundGradientAnimation>
